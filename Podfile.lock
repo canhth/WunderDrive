@@ -1,0 +1,62 @@
+PODS:
+  - Alamofire (4.7.0)
+  - AMScrollingNavbar (4.2.4)
+  - CocoaLumberjack/Default (3.4.1)
+  - CocoaLumberjack/Swift (3.4.1):
+    - CocoaLumberjack/Default
+  - CT_RESTAPI (1.0.0):
+    - Alamofire
+    - CocoaLumberjack/Swift
+    - ObjectMapper
+    - RxSwift
+    - SwiftyJSON
+  - KeychainAccess (3.1.0)
+  - Kingfisher (4.6.3)
+  - MapViewPlus (0.1.1):
+    - Kingfisher (~> 4.6.3)
+  - Nimble (7.0.3)
+  - ObjectMapper (3.1.0)
+  - Quick (1.2.0)
+  - RxCocoa (4.1.2):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.1.2)
+  - SVProgressHUD (2.1.2)
+  - SwiftyJSON (4.0.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - AMScrollingNavbar
+  - CT_RESTAPI (from `LocalPods/CT_RESTAPI/`)
+  - KeychainAccess
+  - MapViewPlus
+  - Nimble (~> 7.0)
+  - ObjectMapper
+  - Quick (~> 1.2)
+  - RxCocoa
+  - RxSwift
+  - SVProgressHUD (= 2.1.2)
+  - SwiftyJSON
+
+EXTERNAL SOURCES:
+  CT_RESTAPI:
+    :path: LocalPods/CT_RESTAPI/
+
+SPEC CHECKSUMS:
+  Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
+  AMScrollingNavbar: e5676bc9caae93d1a3dd5a708d7d9b0cf2fd89d3
+  CocoaLumberjack: 2e258a064cacc8eb9a2aca318e24d02a0a7fd56d
+  CT_RESTAPI: f5d6edceb77ff708c8d658c158920efa277dccd3
+  KeychainAccess: 94c5540b32eabf7bc32bfb976a268e8ea05fd6da
+  Kingfisher: 98e6d5b5e807645743e8ed5ececd25d688d38452
+  MapViewPlus: 26f7f3ad6d44a37f8f912ebe7f7a74e2a2f920bb
+  Nimble: 7f5a9c447a33002645a071bddafbfb24ea70e0ac
+  ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
+  Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
+  RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
+  RxSwift: e49536837d9901277638493ea537394d4b55f570
+  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
+
+PODFILE CHECKSUM: 4a7969562934c829824774cbbe9f72a34238791a
+
+COCOAPODS: 1.3.1

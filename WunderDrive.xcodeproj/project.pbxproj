@@ -1,0 +1,1012 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		034203B420598F0A00084500 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034203B320598F0A00084500 /* AppDelegate.swift */; };
+		034203C920598F0A00084500 /* WunderDriveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034203C820598F0A00084500 /* WunderDriveTests.swift */; };
+		034203D420598F0A00084500 /* WunderDriveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034203D320598F0A00084500 /* WunderDriveUITests.swift */; };
+		034204232059913C00084500 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 034203E22059913B00084500 /* Assets.xcassets */; };
+		034204242059913C00084500 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 034203E42059913B00084500 /* LaunchScreen.storyboard */; };
+		034204252059913C00084500 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 034203E62059913B00084500 /* Main.storyboard */; };
+		034204262059913C00084500 /* BaseMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034203F02059913B00084500 /* BaseMainViewController.swift */; };
+		034204352059913C00084500 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0342040D2059913B00084500 /* Constants.swift */; };
+		034204362059913C00084500 /* ValidateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0342040F2059913B00084500 /* ValidateService.swift */; };
+		034204372059913C00084500 /* ValidateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034204102059913B00084500 /* ValidateProtocol.swift */; };
+		034204382059913C00084500 /* BindingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034204112059913B00084500 /* BindingExtension.swift */; };
+		034204392059913C00084500 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034204122059913B00084500 /* Helper.swift */; };
+		0342043A2059913C00084500 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034204142059913B00084500 /* UIApplication+Extension.swift */; };
+		0342043B2059913C00084500 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034204152059913B00084500 /* UIColor+Extension.swift */; };
+		0342043C2059913C00084500 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034204162059913B00084500 /* UIButton+Extension.swift */; };
+		0342043D2059913C00084500 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034204172059913B00084500 /* UIView+Extension.swift */; };
+		0342043E2059913C00084500 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034204182059913B00084500 /* UIViewController+Extension.swift */; };
+		0342043F2059913C00084500 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034204192059913B00084500 /* String+Extension.swift */; };
+		034204422059913C00084500 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0342041C2059913B00084500 /* UITableView+Extension.swift */; };
+		034204452059913C00084500 /* PaginationNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034204202059913C00084500 /* PaginationNetworkModel.swift */; };
+		034204512059933E00084500 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034204502059933E00084500 /* Coordinate.swift */; };
+		034204532059934F00084500 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034204522059934F00084500 /* Car.swift */; };
+		034204552059937900084500 /* CarPinMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034204542059937900084500 /* CarPinMarkView.swift */; };
+		034204572059938300084500 /* CarPinMarkView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 034204562059938300084500 /* CarPinMarkView.xib */; };
+		0342045A205993A400084500 /* CarInformationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03420458205993A400084500 /* CarInformationCell.swift */; };
+		0342045B205993A400084500 /* CarInformationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03420459205993A400084500 /* CarInformationCell.xib */; };
+		0342045D205993B900084500 /* ListCarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0342045C205993B900084500 /* ListCarsViewController.swift */; };
+		0342045F205993D600084500 /* CarsMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0342045E205993D600084500 /* CarsMapsViewController.swift */; };
+		034204612059945000084500 /* ListCarsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034204602059945000084500 /* ListCarsViewModel.swift */; };
+		435D590F498895A41978C83C /* Pods_WunderDrive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB02F9419AF1905EB54CE613 /* Pods_WunderDrive.framework */; };
+		AC4972E700EB26446B2DD0D6 /* Pods_WunderDriveTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02B8FD8BDB3229145E515DDA /* Pods_WunderDriveTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		034203C520598F0A00084500 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 034203A820598F0900084500 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 034203AF20598F0A00084500;
+			remoteInfo = WunderDrive;
+		};
+		034203D020598F0A00084500 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 034203A820598F0900084500 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 034203AF20598F0A00084500;
+			remoteInfo = WunderDrive;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02B8FD8BDB3229145E515DDA /* Pods_WunderDriveTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WunderDriveTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		034203B020598F0A00084500 /* WunderDrive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WunderDrive.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		034203B320598F0A00084500 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		034203BF20598F0A00084500 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		034203C420598F0A00084500 /* WunderDriveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WunderDriveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		034203C820598F0A00084500 /* WunderDriveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WunderDriveTests.swift; sourceTree = "<group>"; };
+		034203CA20598F0A00084500 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		034203CF20598F0A00084500 /* WunderDriveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WunderDriveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		034203D320598F0A00084500 /* WunderDriveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WunderDriveUITests.swift; sourceTree = "<group>"; };
+		034203D520598F0A00084500 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		034203E22059913B00084500 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		034203E52059913B00084500 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		034203E72059913B00084500 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		034203F02059913B00084500 /* BaseMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMainViewController.swift; sourceTree = "<group>"; };
+		034203F42059913B00084500 /* HomeMoviesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeMoviesViewModel.swift; sourceTree = "<group>"; };
+		034203F62059913B00084500 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		034203F72059913B00084500 /* SearchMovieParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchMovieParams.swift; sourceTree = "<group>"; };
+		034203F82059913B00084500 /* Suggestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Suggestion.swift; sourceTree = "<group>"; };
+		034203FA2059913B00084500 /* HomeMoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeMoviesViewController.swift; sourceTree = "<group>"; };
+		034203FB2059913B00084500 /* SearchSuggestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchSuggestionsViewController.swift; sourceTree = "<group>"; };
+		034203FE2059913B00084500 /* SuggestionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuggestionCell.xib; sourceTree = "<group>"; };
+		034203FF2059913B00084500 /* MovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		034204002059913B00084500 /* MovieCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
+		034204012059913B00084500 /* SuggestionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionCell.swift; sourceTree = "<group>"; };
+		034204032059913B00084500 /* HomeMoviesService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeMoviesService.swift; sourceTree = "<group>"; };
+		0342040D2059913B00084500 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0342040F2059913B00084500 /* ValidateService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidateService.swift; sourceTree = "<group>"; };
+		034204102059913B00084500 /* ValidateProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidateProtocol.swift; sourceTree = "<group>"; };
+		034204112059913B00084500 /* BindingExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BindingExtension.swift; sourceTree = "<group>"; };
+		034204122059913B00084500 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		034204142059913B00084500 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
+		034204152059913B00084500 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		034204162059913B00084500 /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		034204172059913B00084500 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		034204182059913B00084500 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		034204192059913B00084500 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		0342041C2059913B00084500 /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		034204202059913C00084500 /* PaginationNetworkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaginationNetworkModel.swift; sourceTree = "<group>"; };
+		034204502059933E00084500 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
+		034204522059934F00084500 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		034204542059937900084500 /* CarPinMarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarPinMarkView.swift; sourceTree = "<group>"; };
+		034204562059938300084500 /* CarPinMarkView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarPinMarkView.xib; sourceTree = "<group>"; };
+		03420458205993A400084500 /* CarInformationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarInformationCell.swift; sourceTree = "<group>"; };
+		03420459205993A400084500 /* CarInformationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarInformationCell.xib; sourceTree = "<group>"; };
+		0342045C205993B900084500 /* ListCarsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCarsViewController.swift; sourceTree = "<group>"; };
+		0342045E205993D600084500 /* CarsMapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsMapsViewController.swift; sourceTree = "<group>"; };
+		034204602059945000084500 /* ListCarsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCarsViewModel.swift; sourceTree = "<group>"; };
+		88E7535FAEB95D25CD7CD5B3 /* Pods-WunderDriveTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WunderDriveTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WunderDriveTests/Pods-WunderDriveTests.release.xcconfig"; sourceTree = "<group>"; };
+		8BBD994D88CFAA20CE0C3BFE /* Pods-WunderDriveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WunderDriveTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WunderDriveTests/Pods-WunderDriveTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B92965317A3A23B2C3B1DF43 /* Pods-WunderDrive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WunderDrive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WunderDrive/Pods-WunderDrive.debug.xcconfig"; sourceTree = "<group>"; };
+		E7360BC3A53F9863D0EBB04B /* Pods-WunderDrive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WunderDrive.release.xcconfig"; path = "Pods/Target Support Files/Pods-WunderDrive/Pods-WunderDrive.release.xcconfig"; sourceTree = "<group>"; };
+		EB02F9419AF1905EB54CE613 /* Pods_WunderDrive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WunderDrive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		034203AD20598F0A00084500 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				435D590F498895A41978C83C /* Pods_WunderDrive.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		034203C120598F0A00084500 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC4972E700EB26446B2DD0D6 /* Pods_WunderDriveTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		034203CC20598F0A00084500 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034203A720598F0900084500 = {
+			isa = PBXGroup;
+			children = (
+				034203B220598F0A00084500 /* WunderDrive */,
+				034203C720598F0A00084500 /* WunderDriveTests */,
+				034203D220598F0A00084500 /* WunderDriveUITests */,
+				034203B120598F0A00084500 /* Products */,
+				218F1A667EE00BC4A84B82B0 /* Pods */,
+				3AC157DA14B9376B15B1400A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		034203B120598F0A00084500 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				034203B020598F0A00084500 /* WunderDrive.app */,
+				034203C420598F0A00084500 /* WunderDriveTests.xctest */,
+				034203CF20598F0A00084500 /* WunderDriveUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		034203B220598F0A00084500 /* WunderDrive */ = {
+			isa = PBXGroup;
+			children = (
+				034203B320598F0A00084500 /* AppDelegate.swift */,
+				0342041D2059913C00084500 /* BaseModel */,
+				034204132059913B00084500 /* Extensions */,
+				034203E12059913B00084500 /* Resources */,
+				034203E82059913B00084500 /* Sections */,
+				034203E32059913B00084500 /* Storyboards */,
+				0342040C2059913B00084500 /* Utilities */,
+				034203BF20598F0A00084500 /* Info.plist */,
+			);
+			path = WunderDrive;
+			sourceTree = "<group>";
+		};
+		034203C720598F0A00084500 /* WunderDriveTests */ = {
+			isa = PBXGroup;
+			children = (
+				034203C820598F0A00084500 /* WunderDriveTests.swift */,
+				034203CA20598F0A00084500 /* Info.plist */,
+			);
+			path = WunderDriveTests;
+			sourceTree = "<group>";
+		};
+		034203D220598F0A00084500 /* WunderDriveUITests */ = {
+			isa = PBXGroup;
+			children = (
+				034203D320598F0A00084500 /* WunderDriveUITests.swift */,
+				034203D520598F0A00084500 /* Info.plist */,
+			);
+			path = WunderDriveUITests;
+			sourceTree = "<group>";
+		};
+		034203E12059913B00084500 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				034203E22059913B00084500 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		034203E32059913B00084500 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				034203E42059913B00084500 /* LaunchScreen.storyboard */,
+				034203E62059913B00084500 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		034203E82059913B00084500 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				0342044A205992D500084500 /* HomeDrivers */,
+				034203EF2059913B00084500 /* MainHome */,
+				034203F22059913B00084500 /* HomeMovies */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		034203EF2059913B00084500 /* MainHome */ = {
+			isa = PBXGroup;
+			children = (
+				034203F02059913B00084500 /* BaseMainViewController.swift */,
+			);
+			path = MainHome;
+			sourceTree = "<group>";
+		};
+		034203F22059913B00084500 /* HomeMovies */ = {
+			isa = PBXGroup;
+			children = (
+				034203F32059913B00084500 /* ViewModels */,
+				034203F52059913B00084500 /* Models */,
+				034203F92059913B00084500 /* Controllers */,
+				034203FC2059913B00084500 /* Views */,
+				034204022059913B00084500 /* Services */,
+			);
+			path = HomeMovies;
+			sourceTree = "<group>";
+		};
+		034203F32059913B00084500 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				034203F42059913B00084500 /* HomeMoviesViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		034203F52059913B00084500 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				034203F62059913B00084500 /* Movie.swift */,
+				034203F72059913B00084500 /* SearchMovieParams.swift */,
+				034203F82059913B00084500 /* Suggestion.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		034203F92059913B00084500 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				034203FA2059913B00084500 /* HomeMoviesViewController.swift */,
+				034203FB2059913B00084500 /* SearchSuggestionsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		034203FC2059913B00084500 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				034203FD2059913B00084500 /* TableCells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		034203FD2059913B00084500 /* TableCells */ = {
+			isa = PBXGroup;
+			children = (
+				034203FE2059913B00084500 /* SuggestionCell.xib */,
+				034203FF2059913B00084500 /* MovieCell.swift */,
+				034204002059913B00084500 /* MovieCell.xib */,
+				034204012059913B00084500 /* SuggestionCell.swift */,
+			);
+			path = TableCells;
+			sourceTree = "<group>";
+		};
+		034204022059913B00084500 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				034204032059913B00084500 /* HomeMoviesService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		0342040C2059913B00084500 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				0342040E2059913B00084500 /* Validate */,
+				0342040D2059913B00084500 /* Constants.swift */,
+				034204122059913B00084500 /* Helper.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		0342040E2059913B00084500 /* Validate */ = {
+			isa = PBXGroup;
+			children = (
+				0342040F2059913B00084500 /* ValidateService.swift */,
+				034204102059913B00084500 /* ValidateProtocol.swift */,
+				034204112059913B00084500 /* BindingExtension.swift */,
+			);
+			path = Validate;
+			sourceTree = "<group>";
+		};
+		034204132059913B00084500 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				034204142059913B00084500 /* UIApplication+Extension.swift */,
+				034204152059913B00084500 /* UIColor+Extension.swift */,
+				034204162059913B00084500 /* UIButton+Extension.swift */,
+				034204172059913B00084500 /* UIView+Extension.swift */,
+				034204182059913B00084500 /* UIViewController+Extension.swift */,
+				034204192059913B00084500 /* String+Extension.swift */,
+				0342041C2059913B00084500 /* UITableView+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0342041D2059913C00084500 /* BaseModel */ = {
+			isa = PBXGroup;
+			children = (
+				034204202059913C00084500 /* PaginationNetworkModel.swift */,
+			);
+			path = BaseModel;
+			sourceTree = "<group>";
+		};
+		0342044A205992D500084500 /* HomeDrivers */ = {
+			isa = PBXGroup;
+			children = (
+				0342044F2059930200084500 /* Services */,
+				0342044E205992FD00084500 /* Views */,
+				0342044D205992F700084500 /* Controllers */,
+				0342044C205992F200084500 /* Models */,
+				0342044B205992E600084500 /* ViewModels */,
+			);
+			path = HomeDrivers;
+			sourceTree = "<group>";
+		};
+		0342044B205992E600084500 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				034204602059945000084500 /* ListCarsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		0342044C205992F200084500 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				034204502059933E00084500 /* Coordinate.swift */,
+				034204522059934F00084500 /* Car.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0342044D205992F700084500 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0342045C205993B900084500 /* ListCarsViewController.swift */,
+				0342045E205993D600084500 /* CarsMapsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0342044E205992FD00084500 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				034204542059937900084500 /* CarPinMarkView.swift */,
+				034204562059938300084500 /* CarPinMarkView.xib */,
+				03420458205993A400084500 /* CarInformationCell.swift */,
+				03420459205993A400084500 /* CarInformationCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0342044F2059930200084500 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		218F1A667EE00BC4A84B82B0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B92965317A3A23B2C3B1DF43 /* Pods-WunderDrive.debug.xcconfig */,
+				E7360BC3A53F9863D0EBB04B /* Pods-WunderDrive.release.xcconfig */,
+				8BBD994D88CFAA20CE0C3BFE /* Pods-WunderDriveTests.debug.xcconfig */,
+				88E7535FAEB95D25CD7CD5B3 /* Pods-WunderDriveTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3AC157DA14B9376B15B1400A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB02F9419AF1905EB54CE613 /* Pods_WunderDrive.framework */,
+				02B8FD8BDB3229145E515DDA /* Pods_WunderDriveTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		034203AF20598F0A00084500 /* WunderDrive */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 034203D820598F0A00084500 /* Build configuration list for PBXNativeTarget "WunderDrive" */;
+			buildPhases = (
+				216293747A849255FBCE5075 /* [CP] Check Pods Manifest.lock */,
+				034203AC20598F0A00084500 /* Sources */,
+				034203AD20598F0A00084500 /* Frameworks */,
+				034203AE20598F0A00084500 /* Resources */,
+				4A4111F98D646C49A551FF0B /* [CP] Embed Pods Frameworks */,
+				436F7C394F6BDEC8029012C9 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WunderDrive;
+			productName = WunderDrive;
+			productReference = 034203B020598F0A00084500 /* WunderDrive.app */;
+			productType = "com.apple.product-type.application";
+		};
+		034203C320598F0A00084500 /* WunderDriveTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 034203DB20598F0A00084500 /* Build configuration list for PBXNativeTarget "WunderDriveTests" */;
+			buildPhases = (
+				BFC2C2CE91F58E01686367A8 /* [CP] Check Pods Manifest.lock */,
+				034203C020598F0A00084500 /* Sources */,
+				034203C120598F0A00084500 /* Frameworks */,
+				034203C220598F0A00084500 /* Resources */,
+				90B56AD2438A53BC3E38F960 /* [CP] Embed Pods Frameworks */,
+				26357D235911201B97B161F1 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				034203C620598F0A00084500 /* PBXTargetDependency */,
+			);
+			name = WunderDriveTests;
+			productName = WunderDriveTests;
+			productReference = 034203C420598F0A00084500 /* WunderDriveTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		034203CE20598F0A00084500 /* WunderDriveUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 034203DE20598F0A00084500 /* Build configuration list for PBXNativeTarget "WunderDriveUITests" */;
+			buildPhases = (
+				034203CB20598F0A00084500 /* Sources */,
+				034203CC20598F0A00084500 /* Frameworks */,
+				034203CD20598F0A00084500 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				034203D120598F0A00084500 /* PBXTargetDependency */,
+			);
+			name = WunderDriveUITests;
+			productName = WunderDriveUITests;
+			productReference = 034203CF20598F0A00084500 /* WunderDriveUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		034203A820598F0900084500 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Tran Hoang Canh";
+				TargetAttributes = {
+					034203AF20598F0A00084500 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					034203C320598F0A00084500 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 034203AF20598F0A00084500;
+					};
+					034203CE20598F0A00084500 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 034203AF20598F0A00084500;
+					};
+				};
+			};
+			buildConfigurationList = 034203AB20598F0900084500 /* Build configuration list for PBXProject "WunderDrive" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 034203A720598F0900084500;
+			productRefGroup = 034203B120598F0A00084500 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				034203AF20598F0A00084500 /* WunderDrive */,
+				034203C320598F0A00084500 /* WunderDriveTests */,
+				034203CE20598F0A00084500 /* WunderDriveUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		034203AE20598F0A00084500 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0342045B205993A400084500 /* CarInformationCell.xib in Resources */,
+				034204252059913C00084500 /* Main.storyboard in Resources */,
+				034204232059913C00084500 /* Assets.xcassets in Resources */,
+				034204572059938300084500 /* CarPinMarkView.xib in Resources */,
+				034204242059913C00084500 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		034203C220598F0A00084500 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		034203CD20598F0A00084500 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		216293747A849255FBCE5075 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WunderDrive-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		26357D235911201B97B161F1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WunderDriveTests/Pods-WunderDriveTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		436F7C394F6BDEC8029012C9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WunderDrive/Pods-WunderDrive-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4A4111F98D646C49A551FF0B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WunderDrive/Pods-WunderDrive-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AMScrollingNavbar/AMScrollingNavbar.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CT_RESTAPI/CT_RESTAPI.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/MapViewPlus/MapViewPlus.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AMScrollingNavbar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CT_RESTAPI.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MapViewPlus.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WunderDrive/Pods-WunderDrive-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90B56AD2438A53BC3E38F960 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WunderDriveTests/Pods-WunderDriveTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WunderDriveTests/Pods-WunderDriveTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BFC2C2CE91F58E01686367A8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WunderDriveTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		034203AC20598F0A00084500 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0342043E2059913C00084500 /* UIViewController+Extension.swift in Sources */,
+				0342043B2059913C00084500 /* UIColor+Extension.swift in Sources */,
+				0342045A205993A400084500 /* CarInformationCell.swift in Sources */,
+				034204262059913C00084500 /* BaseMainViewController.swift in Sources */,
+				034204532059934F00084500 /* Car.swift in Sources */,
+				0342043C2059913C00084500 /* UIButton+Extension.swift in Sources */,
+				0342045D205993B900084500 /* ListCarsViewController.swift in Sources */,
+				0342043F2059913C00084500 /* String+Extension.swift in Sources */,
+				034204352059913C00084500 /* Constants.swift in Sources */,
+				0342043D2059913C00084500 /* UIView+Extension.swift in Sources */,
+				034204392059913C00084500 /* Helper.swift in Sources */,
+				034204612059945000084500 /* ListCarsViewModel.swift in Sources */,
+				034203B420598F0A00084500 /* AppDelegate.swift in Sources */,
+				034204362059913C00084500 /* ValidateService.swift in Sources */,
+				034204452059913C00084500 /* PaginationNetworkModel.swift in Sources */,
+				034204512059933E00084500 /* Coordinate.swift in Sources */,
+				034204422059913C00084500 /* UITableView+Extension.swift in Sources */,
+				0342045F205993D600084500 /* CarsMapsViewController.swift in Sources */,
+				034204552059937900084500 /* CarPinMarkView.swift in Sources */,
+				034204382059913C00084500 /* BindingExtension.swift in Sources */,
+				034204372059913C00084500 /* ValidateProtocol.swift in Sources */,
+				0342043A2059913C00084500 /* UIApplication+Extension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		034203C020598F0A00084500 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				034203C920598F0A00084500 /* WunderDriveTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		034203CB20598F0A00084500 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				034203D420598F0A00084500 /* WunderDriveUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		034203C620598F0A00084500 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 034203AF20598F0A00084500 /* WunderDrive */;
+			targetProxy = 034203C520598F0A00084500 /* PBXContainerItemProxy */;
+		};
+		034203D120598F0A00084500 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 034203AF20598F0A00084500 /* WunderDrive */;
+			targetProxy = 034203D020598F0A00084500 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		034203E42059913B00084500 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				034203E52059913B00084500 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		034203E62059913B00084500 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				034203E72059913B00084500 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		034203D620598F0A00084500 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		034203D720598F0A00084500 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		034203D920598F0A00084500 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B92965317A3A23B2C3B1DF43 /* Pods-WunderDrive.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S4L5HY6Q7D;
+				INFOPLIST_FILE = WunderDrive/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = canh.tran.WunderDrive;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		034203DA20598F0A00084500 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7360BC3A53F9863D0EBB04B /* Pods-WunderDrive.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S4L5HY6Q7D;
+				INFOPLIST_FILE = WunderDrive/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = canh.tran.WunderDrive;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		034203DC20598F0A00084500 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BBD994D88CFAA20CE0C3BFE /* Pods-WunderDriveTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S4L5HY6Q7D;
+				INFOPLIST_FILE = WunderDriveTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = canh.tran.WunderDriveTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WunderDrive.app/WunderDrive";
+			};
+			name = Debug;
+		};
+		034203DD20598F0A00084500 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88E7535FAEB95D25CD7CD5B3 /* Pods-WunderDriveTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S4L5HY6Q7D;
+				INFOPLIST_FILE = WunderDriveTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = canh.tran.WunderDriveTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WunderDrive.app/WunderDrive";
+			};
+			name = Release;
+		};
+		034203DF20598F0A00084500 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S4L5HY6Q7D;
+				INFOPLIST_FILE = WunderDriveUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = canh.tran.WunderDriveUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WunderDrive;
+			};
+			name = Debug;
+		};
+		034203E020598F0A00084500 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S4L5HY6Q7D;
+				INFOPLIST_FILE = WunderDriveUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = canh.tran.WunderDriveUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WunderDrive;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		034203AB20598F0900084500 /* Build configuration list for PBXProject "WunderDrive" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				034203D620598F0A00084500 /* Debug */,
+				034203D720598F0A00084500 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		034203D820598F0A00084500 /* Build configuration list for PBXNativeTarget "WunderDrive" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				034203D920598F0A00084500 /* Debug */,
+				034203DA20598F0A00084500 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		034203DB20598F0A00084500 /* Build configuration list for PBXNativeTarget "WunderDriveTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				034203DC20598F0A00084500 /* Debug */,
+				034203DD20598F0A00084500 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		034203DE20598F0A00084500 /* Build configuration list for PBXNativeTarget "WunderDriveUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				034203DF20598F0A00084500 /* Debug */,
+				034203E020598F0A00084500 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 034203A820598F0900084500 /* Project object */;
+}
