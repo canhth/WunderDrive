@@ -58,6 +58,7 @@ final class ListCarsViewController: UIViewController {
             .flatMap { offset in
                 self.tableView.isNearBottomEdge() ? Observable.just(()) : Observable.empty()
             }
+            .debounce(0.1, scheduler: MainScheduler.instance)
             .bind(to: homeDriversViewModel.loadNextPageTrigger)
             .disposed(by: disposeBag)
     }

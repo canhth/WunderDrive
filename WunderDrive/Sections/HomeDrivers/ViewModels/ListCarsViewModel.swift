@@ -79,7 +79,7 @@ final class ListCarsViewModel: PaginationNetworkModel<Driver> {
             let nextIndex = lastCurrentIndex + self.maxItemPerPage
             arrayValue = Array(self.driversResults.value[lastCurrentIndex..<nextIndex])
         }
-        return Observable.just(arrayValue).throttle(1, scheduler: MainScheduler.instance)
+        return Observable.just(arrayValue)
         
     }
     
