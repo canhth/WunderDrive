@@ -76,17 +76,6 @@
 		034203E52059913B00084500 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		034203E72059913B00084500 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		034203F02059913B00084500 /* BaseMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMainViewController.swift; sourceTree = "<group>"; };
-		034203F42059913B00084500 /* HomeMoviesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeMoviesViewModel.swift; sourceTree = "<group>"; };
-		034203F62059913B00084500 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
-		034203F72059913B00084500 /* SearchMovieParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchMovieParams.swift; sourceTree = "<group>"; };
-		034203F82059913B00084500 /* Suggestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Suggestion.swift; sourceTree = "<group>"; };
-		034203FA2059913B00084500 /* HomeMoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeMoviesViewController.swift; sourceTree = "<group>"; };
-		034203FB2059913B00084500 /* SearchSuggestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchSuggestionsViewController.swift; sourceTree = "<group>"; };
-		034203FE2059913B00084500 /* SuggestionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SuggestionCell.xib; sourceTree = "<group>"; };
-		034203FF2059913B00084500 /* MovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
-		034204002059913B00084500 /* MovieCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
-		034204012059913B00084500 /* SuggestionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionCell.swift; sourceTree = "<group>"; };
-		034204032059913B00084500 /* HomeMoviesService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeMoviesService.swift; sourceTree = "<group>"; };
 		0342040D2059913B00084500 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0342040F2059913B00084500 /* ValidateService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidateService.swift; sourceTree = "<group>"; };
 		034204102059913B00084500 /* ValidateProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidateProtocol.swift; sourceTree = "<group>"; };
@@ -227,7 +216,6 @@
 			children = (
 				0342044A205992D500084500 /* HomeDrivers */,
 				034203EF2059913B00084500 /* MainHome */,
-				034203F22059913B00084500 /* HomeMovies */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -238,72 +226,6 @@
 				034203F02059913B00084500 /* BaseMainViewController.swift */,
 			);
 			path = MainHome;
-			sourceTree = "<group>";
-		};
-		034203F22059913B00084500 /* HomeMovies */ = {
-			isa = PBXGroup;
-			children = (
-				034203F32059913B00084500 /* ViewModels */,
-				034203F52059913B00084500 /* Models */,
-				034203F92059913B00084500 /* Controllers */,
-				034203FC2059913B00084500 /* Views */,
-				034204022059913B00084500 /* Services */,
-			);
-			path = HomeMovies;
-			sourceTree = "<group>";
-		};
-		034203F32059913B00084500 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				034203F42059913B00084500 /* HomeMoviesViewModel.swift */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		034203F52059913B00084500 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				034203F62059913B00084500 /* Movie.swift */,
-				034203F72059913B00084500 /* SearchMovieParams.swift */,
-				034203F82059913B00084500 /* Suggestion.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		034203F92059913B00084500 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				034203FA2059913B00084500 /* HomeMoviesViewController.swift */,
-				034203FB2059913B00084500 /* SearchSuggestionsViewController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		034203FC2059913B00084500 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				034203FD2059913B00084500 /* TableCells */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		034203FD2059913B00084500 /* TableCells */ = {
-			isa = PBXGroup;
-			children = (
-				034203FE2059913B00084500 /* SuggestionCell.xib */,
-				034203FF2059913B00084500 /* MovieCell.swift */,
-				034204002059913B00084500 /* MovieCell.xib */,
-				034204012059913B00084500 /* SuggestionCell.swift */,
-			);
-			path = TableCells;
-			sourceTree = "<group>";
-		};
-		034204022059913B00084500 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				034204032059913B00084500 /* HomeMoviesService.swift */,
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 		0342040C2059913B00084500 /* Utilities */ = {

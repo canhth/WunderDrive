@@ -29,7 +29,7 @@ class PaginationNetworkModel<T1: Mappable>: NSObject {
         let refreshRequest = loading.asObservable()
             .sample(refreshTrigger)
             .flatMap { loading -> Observable<Int> in
-                if loading {
+                if self.offset >= self.maxOffset {
                     return Observable.empty()
                 } else {
                     return Observable<Int>.create { observer in
@@ -43,10 +43,9 @@ class PaginationNetworkModel<T1: Mappable>: NSObject {
         let nextPageRequest = loading.asObservable()
             .sample(loadNextPageTrigger)
             .flatMap { [unowned self] loading -> Observable<Int> in
-                if loading && (self.offset >= self.maxOffset) {
+                if (self.offset > self.maxOffset) {
                     return Observable.empty()
                 } else {
-                    
                     return Observable<Int>.create { [unowned self] observer in
                         self.offset += 1
                         observer.onNext(self.offset)

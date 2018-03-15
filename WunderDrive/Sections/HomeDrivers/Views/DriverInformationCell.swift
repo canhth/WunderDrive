@@ -22,12 +22,17 @@ final class DriverInformationCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         cellContentView.layer.applySketchShadow(color: UIColor.shadowColor, alpha: 0.5, x: 0, y: 5, blur: 12, spread: 0)
-        
+        cellContentView.layer.masksToBounds = false
     }
     
     // MARK: - Funcs
-    func setupCellWithModel(model: Driver) {
-        
+    func setupCellWithModel(model: Driver, index: Int) {
+        carNameLabel.text = model.name
+        fluelLabel.text = model.fuel.description
+        typeEngineLabel.text = model.engineType
+        exteriorLabel.text = model.exterior
+        interiorLabel.text = index.description
+        addressLabel.text = model.address
     }
     
 }

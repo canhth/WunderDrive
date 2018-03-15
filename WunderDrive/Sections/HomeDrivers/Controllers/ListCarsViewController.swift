@@ -51,7 +51,7 @@ final class ListCarsViewController: UIViewController {
         // TableView
         tableView.registerCellNib(DriverInformationCell.self)
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = self.view.bounds.width
+        tableView.estimatedRowHeight = 150
         
         // For Lazy paging loading
         tableView.rx.contentOffset
@@ -64,7 +64,34 @@ final class ListCarsViewController: UIViewController {
     
     func setupViewModel() {
         homeDriversViewModel.setupHomeDriversViewModel()
+        
+        // --- For loading animation ---
+        homeDriversViewModel.isLoadingAnimation.subscribe(onNext: { [weak self] (isLoading) in
+            if isLoading { self?.loadingView.startLoadding() }
+            else {  self?.loadingView.stopLoadding() }
+        }).disposed(by: disposeBag)
+        
+        // --- For handling error ---
+        homeDriversViewModel.errorObservable.subscribe(onNext: { (error) in
+            Helper.showAlertViewWith(error: error)
+        }).disposed(by: disposeBag)
+        
+        // --- Binding for TableView ---
+        homeDriversViewModel.elements.asObservable()
+            .observeOn(MainScheduler.asyncInstance)
+            .subscribe(onNext: { [weak self] (results) in
+                guard let strongSelf = self else { return }
+                strongSelf.tableView.dataSource = nil
+                strongSelf.tableView.delegate = nil
+                Observable.just(results)
+                    .bind(to: strongSelf.tableView.rx
+                        .items(cellIdentifier: "DriverInformationCell")) { (index, model: Driver, cell) in
+                            if let cell: DriverInformationCell = cell as? DriverInformationCell {
+                                cell.setupCellWithModel(model: model, index: index)
+                            }
+                    }.disposed(by: strongSelf.disposeBag)
+            }).disposed(by: disposeBag)
     }
     
-
+    
 }

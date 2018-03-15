@@ -15,8 +15,8 @@ import CT_RESTAPI
 final class ListCarsViewModel: PaginationNetworkModel<Driver> {
     
     //MARK: - Variables
-    fileprivate(set) var driversResults             : Variable<[Driver]>!
     fileprivate(set) var homeSearchService          : SearchDriversServiece!
+    fileprivate(set) var driversResults             = Variable<[Driver]>([])
     fileprivate(set) var errorObservable            = PublishSubject<CTNetworkErrorType>()
     fileprivate(set) var isLoadingAnimation         = PublishSubject<Bool>()
     fileprivate(set) var page                       = BehaviorSubject<Int>(value: 1)
@@ -51,7 +51,6 @@ final class ListCarsViewModel: PaginationNetworkModel<Driver> {
     }
     
     //MARK: - Supporting methods
-    
     /// Setup data of view model after fetched results
     ///
     /// - Parameter results: results was found
@@ -59,25 +58,29 @@ final class ListCarsViewModel: PaginationNetworkModel<Driver> {
         guard results.count > 0 else { return }
         self.driversResults.value = results
         self.elements.value = Array(results.prefix(upTo: maxItemPerPage))
-        self.maxOffset = (results.count % maxItemPerPage) + 1
+        self.maxOffset = Int(results.count / maxItemPerPage) + 1
     }
     
-//    /// Lazy loading method
-//    ///
-//    /// - Parameter offset: the next page
-//    /// - Returns: Observable that we need to triger
-//    override func loadData(offset: Int) -> Observable<[Driver]> {
-//        self.isLoadingAnimation.onNext(true)
-//        searchParam.value.page = offset
-//        let observable: Observable<[Driver]> = HomeMoviesService.getMoviesArrayWithParam(param: searchParam.value, keyPath: "results")
-//            .observeOn(MainScheduler.instance)
-//            .map { (value) -> [Movie] in
-//                return value
-//        }
-//        observable.subscribe { (_ ) in
-//            self.isLoadingAnimation.onNext(false)
-//            }.disposed(by: disposeBag)
-//        return observable
-//    }
+    /// Lazy loading method
+    /// - Parameter offset: the next page
+    /// - Returns: Observable that we need to triger
+    override func loadData(offset: Int) -> Observable<[Driver]> {
+        print("Current offset: \(offset)")
+        
+        // --- Setup drivers results list Observable ---
+        var arrayValue = [Driver]()
+        guard maxOffset > offset else { return Observable.just(arrayValue) }
+        
+        let lastCurrentIndex = (offset - 1) * self.maxItemPerPage - 1
+        if offset >= self.maxOffset - 1 {
+            // Return all values in the last page
+            arrayValue = Array(self.driversResults.value[lastCurrentIndex..<self.driversResults.value.count])
+        } else {
+            let nextIndex = lastCurrentIndex + self.maxItemPerPage
+            arrayValue = Array(self.driversResults.value[lastCurrentIndex..<nextIndex])
+        }
+        return Observable.just(arrayValue).throttle(1, scheduler: MainScheduler.instance)
+        
+    }
     
 }
