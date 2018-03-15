@@ -39,21 +39,14 @@
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_logo" translatesAutoresizingMaskIntoConstraints="NO" id="9rs-Eh-vO4">
-                                <rect key="frame" x="136.5" y="196.5" width="102" height="107"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="102" id="4BS-rb-hBx"/>
-                                    <constraint firstAttribute="height" constant="107" id="S3w-uq-mvg"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Wikipedia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HQ6-ML-EWa">
-                                <rect key="frame" x="125" y="313.5" width="125" height="19.5"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wunder Drive" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HQ6-ML-EWa">
+                                <rect key="frame" x="81.5" y="247" width="213" height="39.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="33"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's see movies in '2018'" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smO-Gk-d6d">
-                                <rect key="frame" x="50" y="433" width="275" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's discover Wunder, NOW!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smO-Gk-d6d">
+                                <rect key="frame" x="50" y="386" width="275" height="18"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -63,19 +56,18 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UW0-ZY-hwH" secondAttribute="bottom" constant="20" id="0LK-5m-yCQ"/>
                             <constraint firstItem="8Ay-Xn-5C7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="3NE-Ga-VxG"/>
+                            <constraint firstItem="HQ6-ML-EWa" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" multiplier="0.8" id="5Ge-3k-0X9"/>
                             <constraint firstItem="8Ay-Xn-5C7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6yy-Vc-BJU"/>
                             <constraint firstItem="smO-Gk-d6d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="8QI-4W-9cS"/>
                             <constraint firstItem="smO-Gk-d6d" firstAttribute="top" secondItem="HQ6-ML-EWa" secondAttribute="bottom" constant="100" id="ARy-xv-X0s"/>
-                            <constraint firstItem="9rs-Eh-vO4" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" multiplier="0.75" id="L6X-kZ-ItV"/>
                             <constraint firstItem="0jJ-LV-ZX8" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="ShB-oc-Bzh"/>
                             <constraint firstItem="0jJ-LV-ZX8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="URF-2V-FLf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="smO-Gk-d6d" secondAttribute="trailing" constant="50" id="VBy-SF-IjK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UW0-ZY-hwH" secondAttribute="trailing" constant="20" id="XHp-lX-2Cv"/>
+                            <constraint firstItem="HQ6-ML-EWa" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="emN-YD-Pij"/>
                             <constraint firstItem="8Ay-Xn-5C7" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="hfY-lo-nky"/>
-                            <constraint firstItem="HQ6-ML-EWa" firstAttribute="top" secondItem="9rs-Eh-vO4" secondAttribute="bottom" constant="10" id="hig-aA-pME"/>
                             <constraint firstItem="8Ay-Xn-5C7" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="jsG-2e-b6r"/>
                             <constraint firstItem="UW0-ZY-hwH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="pfB-rV-Asf"/>
-                            <constraint firstItem="9rs-Eh-vO4" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="rKF-V2-17x"/>
                             <constraint firstItem="HQ6-ML-EWa" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="rYn-2O-jbU"/>
                             <constraint firstAttribute="trailing" secondItem="0jJ-LV-ZX8" secondAttribute="trailing" id="vby-I4-xeS"/>
                             <constraint firstAttribute="bottom" secondItem="0jJ-LV-ZX8" secondAttribute="bottom" id="yhn-Zj-IoG"/>
@@ -91,6 +83,5 @@
     <resources>
         <image name="splash_background" width="375" height="812"/>
         <image name="splash_decoration" width="375" height="665"/>
-        <image name="splash_logo" width="102" height="107"/>
     </resources>
 </document>

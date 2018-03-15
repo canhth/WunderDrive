@@ -7,29 +7,64 @@
 //
 
 import UIKit
+import AMScrollingNavbar
+import RxCocoa
+import RxSwift
 
-class ListCarsViewController: UIViewController {
+final class ListCarsViewController: UIViewController {
 
+    // MARK: - IBOutlets & Variables
+    @IBOutlet weak var tableView: UITableView!
+    
+    fileprivate let disposeBag = DisposeBag()
+    fileprivate let homeDriversViewModel = ListCarsViewModel(homeSearchService: SearchDriversServiece())
+    
+    fileprivate lazy var loadingView: LoaddingView = {
+        let loadingView = LoaddingView(frame: UIScreen.main.bounds)
+        loadingView.backgroundColor = .clear
+        loadingView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        self.view.addSubview(loadingView)
+        return loadingView
+    }()
+    
+    
+    //MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupViews()
+        setupViewModel()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let navigationController = navigationController as? ScrollingNavigationController {
+            navigationController.followScrollView(tableView, delay: 50.0)
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    //MARK: - Setup views & ViewModel
+    
+    /// Setup all the view components
+    fileprivate func setupViews() {
+        
+        // TableView
+        tableView.registerCellNib(DriverInformationCell.self)
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = self.view.bounds.width
+        
+        // For Lazy paging loading
+        tableView.rx.contentOffset
+            .flatMap { offset in
+                self.tableView.isNearBottomEdge() ? Observable.just(()) : Observable.empty()
+            }
+            .bind(to: homeDriversViewModel.loadNextPageTrigger)
+            .disposed(by: disposeBag)
     }
-    */
+    
+    func setupViewModel() {
+        homeDriversViewModel.setupHomeDriversViewModel()
+    }
+    
 
 }

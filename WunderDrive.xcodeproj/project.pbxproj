@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03408B9C205A8A6A0083375E /* DriverPinMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034204542059937900084500 /* DriverPinMarkView.swift */; };
+		03408B9E205A8B460083375E /* SearchDriversServiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03408B9D205A8B460083375E /* SearchDriversServiece.swift */; };
+		03408BA1205A925F0083375E /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03408BA0205A925F0083375E /* LoadingView.swift */; };
 		034203B420598F0A00084500 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034203B320598F0A00084500 /* AppDelegate.swift */; };
 		034203C920598F0A00084500 /* WunderDriveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034203C820598F0A00084500 /* WunderDriveTests.swift */; };
 		034203D420598F0A00084500 /* WunderDriveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034203D320598F0A00084500 /* WunderDriveUITests.swift */; };
@@ -27,12 +30,11 @@
 		0342043F2059913C00084500 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034204192059913B00084500 /* String+Extension.swift */; };
 		034204422059913C00084500 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0342041C2059913B00084500 /* UITableView+Extension.swift */; };
 		034204452059913C00084500 /* PaginationNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034204202059913C00084500 /* PaginationNetworkModel.swift */; };
-		034204512059933E00084500 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034204502059933E00084500 /* Coordinate.swift */; };
 		034204532059934F00084500 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034204522059934F00084500 /* Car.swift */; };
-		034204552059937900084500 /* CarPinMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034204542059937900084500 /* CarPinMarkView.swift */; };
-		034204572059938300084500 /* CarPinMarkView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 034204562059938300084500 /* CarPinMarkView.xib */; };
-		0342045A205993A400084500 /* CarInformationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03420458205993A400084500 /* CarInformationCell.swift */; };
-		0342045B205993A400084500 /* CarInformationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03420459205993A400084500 /* CarInformationCell.xib */; };
+		034204552059937900084500 /* DriverPinMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034204542059937900084500 /* DriverPinMarkView.swift */; };
+		034204572059938300084500 /* DriverPinMarkView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 034204562059938300084500 /* DriverPinMarkView.xib */; };
+		0342045A205993A400084500 /* DriverInformationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03420458205993A400084500 /* DriverInformationCell.swift */; };
+		0342045B205993A400084500 /* DriverInformationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03420459205993A400084500 /* DriverInformationCell.xib */; };
 		0342045D205993B900084500 /* ListCarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0342045C205993B900084500 /* ListCarsViewController.swift */; };
 		0342045F205993D600084500 /* CarsMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0342045E205993D600084500 /* CarsMapsViewController.swift */; };
 		034204612059945000084500 /* ListCarsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034204602059945000084500 /* ListCarsViewModel.swift */; };
@@ -59,6 +61,8 @@
 
 /* Begin PBXFileReference section */
 		02B8FD8BDB3229145E515DDA /* Pods_WunderDriveTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WunderDriveTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		03408B9D205A8B460083375E /* SearchDriversServiece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDriversServiece.swift; sourceTree = "<group>"; };
+		03408BA0205A925F0083375E /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		034203B020598F0A00084500 /* WunderDrive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WunderDrive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		034203B320598F0A00084500 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		034203BF20598F0A00084500 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -96,12 +100,11 @@
 		034204192059913B00084500 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		0342041C2059913B00084500 /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		034204202059913C00084500 /* PaginationNetworkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaginationNetworkModel.swift; sourceTree = "<group>"; };
-		034204502059933E00084500 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
 		034204522059934F00084500 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
-		034204542059937900084500 /* CarPinMarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarPinMarkView.swift; sourceTree = "<group>"; };
-		034204562059938300084500 /* CarPinMarkView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarPinMarkView.xib; sourceTree = "<group>"; };
-		03420458205993A400084500 /* CarInformationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarInformationCell.swift; sourceTree = "<group>"; };
-		03420459205993A400084500 /* CarInformationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarInformationCell.xib; sourceTree = "<group>"; };
+		034204542059937900084500 /* DriverPinMarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverPinMarkView.swift; sourceTree = "<group>"; };
+		034204562059938300084500 /* DriverPinMarkView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DriverPinMarkView.xib; sourceTree = "<group>"; };
+		03420458205993A400084500 /* DriverInformationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverInformationCell.swift; sourceTree = "<group>"; };
+		03420459205993A400084500 /* DriverInformationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DriverInformationCell.xib; sourceTree = "<group>"; };
 		0342045C205993B900084500 /* ListCarsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCarsViewController.swift; sourceTree = "<group>"; };
 		0342045E205993D600084500 /* CarsMapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsMapsViewController.swift; sourceTree = "<group>"; };
 		034204602059945000084500 /* ListCarsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCarsViewModel.swift; sourceTree = "<group>"; };
@@ -139,6 +142,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03408B9F205A92510083375E /* CommonViews */ = {
+			isa = PBXGroup;
+			children = (
+				03408BA0205A925F0083375E /* LoadingView.swift */,
+			);
+			path = CommonViews;
+			sourceTree = "<group>";
+		};
 		034203A720598F0900084500 = {
 			isa = PBXGroup;
 			children = (
@@ -205,8 +216,8 @@
 		034203E32059913B00084500 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				034203E42059913B00084500 /* LaunchScreen.storyboard */,
 				034203E62059913B00084500 /* Main.storyboard */,
+				034203E42059913B00084500 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -298,6 +309,7 @@
 		0342040C2059913B00084500 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				03408B9F205A92510083375E /* CommonViews */,
 				0342040E2059913B00084500 /* Validate */,
 				0342040D2059913B00084500 /* Constants.swift */,
 				034204122059913B00084500 /* Helper.swift */,
@@ -360,7 +372,6 @@
 		0342044C205992F200084500 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				034204502059933E00084500 /* Coordinate.swift */,
 				034204522059934F00084500 /* Car.swift */,
 			);
 			path = Models;
@@ -378,10 +389,10 @@
 		0342044E205992FD00084500 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				034204542059937900084500 /* CarPinMarkView.swift */,
-				034204562059938300084500 /* CarPinMarkView.xib */,
-				03420458205993A400084500 /* CarInformationCell.swift */,
-				03420459205993A400084500 /* CarInformationCell.xib */,
+				034204542059937900084500 /* DriverPinMarkView.swift */,
+				034204562059938300084500 /* DriverPinMarkView.xib */,
+				03420458205993A400084500 /* DriverInformationCell.swift */,
+				03420459205993A400084500 /* DriverInformationCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -389,6 +400,7 @@
 		0342044F2059930200084500 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				03408B9D205A8B460083375E /* SearchDriversServiece.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -526,10 +538,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0342045B205993A400084500 /* CarInformationCell.xib in Resources */,
+				0342045B205993A400084500 /* DriverInformationCell.xib in Resources */,
 				034204252059913C00084500 /* Main.storyboard in Resources */,
 				034204232059913C00084500 /* Assets.xcassets in Resources */,
-				034204572059938300084500 /* CarPinMarkView.xib in Resources */,
+				034204572059938300084500 /* DriverPinMarkView.xib in Resources */,
 				034204242059913C00084500 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -686,7 +698,8 @@
 			files = (
 				0342043E2059913C00084500 /* UIViewController+Extension.swift in Sources */,
 				0342043B2059913C00084500 /* UIColor+Extension.swift in Sources */,
-				0342045A205993A400084500 /* CarInformationCell.swift in Sources */,
+				0342045A205993A400084500 /* DriverInformationCell.swift in Sources */,
+				03408B9E205A8B460083375E /* SearchDriversServiece.swift in Sources */,
 				034204262059913C00084500 /* BaseMainViewController.swift in Sources */,
 				034204532059934F00084500 /* Car.swift in Sources */,
 				0342043C2059913C00084500 /* UIButton+Extension.swift in Sources */,
@@ -699,13 +712,13 @@
 				034203B420598F0A00084500 /* AppDelegate.swift in Sources */,
 				034204362059913C00084500 /* ValidateService.swift in Sources */,
 				034204452059913C00084500 /* PaginationNetworkModel.swift in Sources */,
-				034204512059933E00084500 /* Coordinate.swift in Sources */,
 				034204422059913C00084500 /* UITableView+Extension.swift in Sources */,
 				0342045F205993D600084500 /* CarsMapsViewController.swift in Sources */,
-				034204552059937900084500 /* CarPinMarkView.swift in Sources */,
+				034204552059937900084500 /* DriverPinMarkView.swift in Sources */,
 				034204382059913C00084500 /* BindingExtension.swift in Sources */,
 				034204372059913C00084500 /* ValidateProtocol.swift in Sources */,
 				0342043A2059913C00084500 /* UIApplication+Extension.swift in Sources */,
+				03408BA1205A925F0083375E /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -721,6 +734,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03408B9C205A8A6A0083375E /* DriverPinMarkView.swift in Sources */,
 				034203D420598F0A00084500 /* WunderDriveUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

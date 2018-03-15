@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import MapViewPlus
 
 class CarsMapsViewController: UIViewController {
-
+    
+    @IBOutlet weak var mapView: MapViewPlus!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

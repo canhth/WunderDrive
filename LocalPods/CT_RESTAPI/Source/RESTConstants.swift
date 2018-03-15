@@ -21,15 +21,15 @@ public struct RESTContants {
     
     //MARK: Webservice url
     #if DEBUG
-        static let kDefineWebserviceUrl                 = "http://api.themoviedb.org/3/"
+        static let kDefineWebserviceUrl                 = "https://s3-us-west-2.amazonaws.com/"
     #else
-        static let kDefineWebserviceUrl                 = "http://api.themoviedb.org/3/"
+        static let kDefineWebserviceUrl                 = "https://s3-us-west-2.amazonaws.com/"
     #endif
 
     #if DEBUG
-        public static let kDefineWebserviceResourceUrl             = "http://image.tmdb.org/t/p/"
+        public static let kDefineWebserviceResourceUrl             = "https://s3-us-west-2.amazonaws.com/"
     #else
-        public static let kDefineWebserviceResourceUrl             = "http://image.tmdb.org/t/p/"
+        public static let kDefineWebserviceResourceUrl             = "https://s3-us-west-2.amazonaws.com/"
     #endif
     
     static let headers                                  = ["Content-Type" : "application/json"]

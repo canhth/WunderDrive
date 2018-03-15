@@ -50,14 +50,14 @@ extension UIColor {
     }
     
     static var shadowColor: UIColor = {
-        return UIColor(hex: "000000").withAlphaComponent(1)
+        return UIColor(hex: "BDBDBD").withAlphaComponent(1)
     }()
     
-    static var careemOrangeColor: UIColor = {
+    static var wunderOrangeColor: UIColor = {
         return UIColor(hex: "F07F1E").withAlphaComponent(1)
     }()
     
-    static var careemTextColor: UIColor = {
+    static var wunderTextColor: UIColor = {
         return UIColor(hex: "222222").withAlphaComponent(0.8)
     }()
 }

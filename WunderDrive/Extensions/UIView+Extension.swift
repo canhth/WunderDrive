@@ -73,7 +73,7 @@ extension CALayer {
 }
 
 extension UIScrollView {
-    func  isNearBottomEdge(edgeOffset: CGFloat = 220.0) -> Bool {
+    func  isNearBottomEdge(edgeOffset: CGFloat = 50.0) -> Bool {
         guard self.contentSize.height > self.frame.size.height else { return false }
         let isNearBottomEdge = self.contentOffset.y + self.frame.size.height + edgeOffset > self.contentSize.height
         print("isNearBottomEdge: \(isNearBottomEdge)")

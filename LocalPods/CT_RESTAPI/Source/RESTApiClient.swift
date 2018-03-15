@@ -131,7 +131,7 @@ open class RESTApiClient: NSObject {
     ///
     /// - Returns: Response wapper steam
     open func baseRequest() -> Observable<ResponseWrapper> {
-        return Observable.create { observer -> Disposable in 
+        return Observable.create { observer -> Disposable in
             request(self.baseUrl,
                     method: self.requestMethod,
                     parameters: self.parameters)

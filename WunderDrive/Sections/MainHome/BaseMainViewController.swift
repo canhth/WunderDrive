@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AMScrollingNavbar
 
 class BaseMainViewController: UIViewController {
 
@@ -18,5 +19,10 @@ class BaseMainViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        if let navigationController = navigationController as? ScrollingNavigationController {
+            navigationController.stopFollowingScrollView()
+        }
+    }
 }
