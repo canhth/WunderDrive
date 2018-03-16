@@ -95,6 +95,12 @@ final class ListCarsViewModel: PaginationNetworkModel<Car> {
         return Observable.just(arrayValue) 
     }
     
+    
+    /// Load moew cars when user zoom or dragging map
+    ///
+    /// - Parameters:
+    ///   - zoomValue: currentZoomValue
+    ///   - centerLocation: center location of map
     func loadMoreCarWith(zoomValue: Int, centerLocation: CLLocation) {
         
         self.driversResults.value = self.driversResults.value.sorted(by: { $0.distance(to: centerLocation) < $1.distance(to: centerLocation) })
