@@ -1,8 +1,8 @@
 # WunderDrive 
 
-##### We are going to create a simple app to get list cars sepalet in two sections (TableView and Maps). It has sort by nearest of user location, lazy loading paging on list cars.
+### We are going to create a simple app to get list cars sepalet in two sections (TableView and Maps). It has sort by nearest of user location, lazy loading paging on list cars.
 
-## Please make sure that you're testing this app by real device, otherwise you must set default location to (53.570493, 9.985019)
+#### Please make sure that you're testing this app by real device, otherwise you must set default location to (53.570493, 9.985019)
 <p align="center">
   <img width="520" height="536" src="images/Howto.png"/>
 </p>
