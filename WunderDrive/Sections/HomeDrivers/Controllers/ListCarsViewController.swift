@@ -74,7 +74,9 @@ final class ListCarsViewController: UIViewController {
         homeDriversViewModel.setupHomeDriversViewModel()
         
         // --- For loading animation ---
-        homeDriversViewModel.isLoadingAnimation.subscribe(onNext: { [weak self] (isLoading) in
+        homeDriversViewModel.isLoadingAnimation
+            .observeOn(MainScheduler.asyncInstance)
+            .subscribe(onNext: { [weak self] (isLoading) in
             if isLoading { self?.loadingView.startLoadding() }
             else { self?.loadingView.stopLoadding() }
         }).disposed(by: disposeBag)

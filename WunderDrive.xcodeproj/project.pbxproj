@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03120296205BE7490069BAF1 /* HomeDriversTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03120295205BE7490069BAF1 /* HomeDriversTest.swift */; };
+		03120298205BE76A0069BAF1 /* MockHomeDeriverTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03120297205BE76A0069BAF1 /* MockHomeDeriverTest.swift */; };
+		0312029B205BE7880069BAF1 /* MockSearchDriversServiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0312029A205BE7880069BAF1 /* MockSearchDriversServiece.swift */; };
+		0312029E205BECE70069BAF1 /* WunderLocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0312029D205BECE70069BAF1 /* WunderLocationTests.swift */; };
 		03408B9C205A8A6A0083375E /* DriverPinMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034204542059937900084500 /* DriverPinMarkView.swift */; };
 		03408B9E205A8B460083375E /* SearchDriversServiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03408B9D205A8B460083375E /* SearchDriversServiece.swift */; };
 		03408BA1205A925F0083375E /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03408BA0205A925F0083375E /* LoadingView.swift */; };
@@ -65,6 +69,10 @@
 
 /* Begin PBXFileReference section */
 		02B8FD8BDB3229145E515DDA /* Pods_WunderDriveTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WunderDriveTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		03120295205BE7490069BAF1 /* HomeDriversTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDriversTest.swift; sourceTree = "<group>"; };
+		03120297205BE76A0069BAF1 /* MockHomeDeriverTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHomeDeriverTest.swift; sourceTree = "<group>"; };
+		0312029A205BE7880069BAF1 /* MockSearchDriversServiece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSearchDriversServiece.swift; sourceTree = "<group>"; };
+		0312029D205BECE70069BAF1 /* WunderLocationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WunderLocationTests.swift; sourceTree = "<group>"; };
 		03408B9D205A8B460083375E /* SearchDriversServiece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDriversServiece.swift; sourceTree = "<group>"; };
 		03408BA0205A925F0083375E /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		034203B020598F0A00084500 /* WunderDrive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WunderDrive.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +147,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03120293205BE7250069BAF1 /* HomeDrivers */ = {
+			isa = PBXGroup;
+			children = (
+				03120299205BE7750069BAF1 /* MockServieces */,
+				03120295205BE7490069BAF1 /* HomeDriversTest.swift */,
+				03120297205BE76A0069BAF1 /* MockHomeDeriverTest.swift */,
+				0312029D205BECE70069BAF1 /* WunderLocationTests.swift */,
+			);
+			path = HomeDrivers;
+			sourceTree = "<group>";
+		};
+		03120299205BE7750069BAF1 /* MockServieces */ = {
+			isa = PBXGroup;
+			children = (
+				0312029A205BE7880069BAF1 /* MockSearchDriversServiece.swift */,
+			);
+			path = MockServieces;
+			sourceTree = "<group>";
+		};
 		03408B9F205A92510083375E /* CommonViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +215,7 @@
 		034203C720598F0A00084500 /* WunderDriveTests */ = {
 			isa = PBXGroup;
 			children = (
+				03120293205BE7250069BAF1 /* HomeDrivers */,
 				034203C820598F0A00084500 /* WunderDriveTests.swift */,
 				034203CA20598F0A00084500 /* Info.plist */,
 			);
@@ -680,7 +708,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03120296205BE7490069BAF1 /* HomeDriversTest.swift in Sources */,
+				03120298205BE76A0069BAF1 /* MockHomeDeriverTest.swift in Sources */,
+				0312029E205BECE70069BAF1 /* WunderLocationTests.swift in Sources */,
 				034203C920598F0A00084500 /* WunderDriveTests.swift in Sources */,
+				0312029B205BE7880069BAF1 /* MockSearchDriversServiece.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

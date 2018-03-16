@@ -26,6 +26,7 @@ class DriverPinMarkView: UIView {
 }
 
 extension DriverPinMarkView: CalloutViewPlus {
+    
     func configureCallout(_ viewModel: CalloutViewModel) {
         if let model = viewModel as? PlaceMarkModel {
             carNameLabel.text = model.driver.name

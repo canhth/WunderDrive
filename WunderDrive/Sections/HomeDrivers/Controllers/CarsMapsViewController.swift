@@ -13,7 +13,8 @@ import MapViewPlus
 import MapKit
 
 class CarsMapsViewController: UIViewController {
-     
+    
+    //MARK: - IBOutlets & Variables
     @IBOutlet weak var mapView: MapViewPlus!
     
     fileprivate weak var currentCalloutView: UIView?
@@ -80,6 +81,7 @@ class CarsMapsViewController: UIViewController {
     }
 }
 
+//MARK: MapViewPlush Delegate
 extension CarsMapsViewController: MapViewPlusDelegate {
     func mapView(_ mapView: MapViewPlus, imageFor annotation: AnnotationPlus) -> UIImage {
         return UIImage(named: "icon_car_placemark")!
@@ -98,6 +100,7 @@ extension CarsMapsViewController: AnchorViewCustomizerDelegate {
     }
 }
 
+//MARK: Original MapKitDelegate
 extension CarsMapsViewController: MKMapViewDelegate, CLLocationManagerDelegate {
     
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {

@@ -9,8 +9,7 @@
 import UIKit
 import RxCocoa
 import RxSwift
-import CT_RESTAPI
-import Alamofire
+import CT_RESTAPI 
 
 typealias SearchDriversServiceCompletionHandler = (_ results: [Car], _ error: Error?) -> Void
 
@@ -47,22 +46,5 @@ final class SearchDriversServiece: SearchDriversServiceProtocol {
         }
     }
     
-    func createFakePagingLoading() -> Observable<[Car]> {
-        return Observable.create { observer -> Disposable in
-            request("https://www.google.com/",
-                    method: HTTPMethod.get)
-                .responseData(queue: DispatchQueue.main, completionHandler: {(_) in
-                    observer.onNext([])
-                    observer.onCompleted()
-                })
-
-            return Disposables.create {}
-            }.do(onError: { (error) in
-            }) 
-        
-//        let apiManager = RESTApiClient(subPath: "wunderbucket", functionName: "locations.json", method: .GET, endcoding: .URL)
-//
-//        return apiManager.requestObjects(keyPath: "placemarks")
-    }
 
 }

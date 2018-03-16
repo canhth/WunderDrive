@@ -16,7 +16,7 @@ import CoreLocation
 final class ListCarsViewModel: PaginationNetworkModel<Car> {
     
     //MARK: - Variables
-    fileprivate(set) var homeSearchService          : SearchDriversServiece!
+    fileprivate(set) var homeSearchService          : SearchDriversServiceProtocol!
     fileprivate(set) var driversResults             = Variable<[Car]>([])
     fileprivate(set) var errorObservable            = PublishSubject<CTNetworkErrorType>()
     fileprivate(set) var isLoadingAnimation         = PublishSubject<Bool>()
@@ -30,7 +30,7 @@ final class ListCarsViewModel: PaginationNetworkModel<Car> {
     /// Init ViewModel
     ///
     /// - Parameter homeSearchService: API service
-    init(homeSearchService: SearchDriversServiece) {
+    init(homeSearchService: SearchDriversServiceProtocol) {
         self.homeSearchService = homeSearchService
     }
     
