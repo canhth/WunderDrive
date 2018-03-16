@@ -26,12 +26,12 @@ final class DriverInformationCell: UITableViewCell {
     }
     
     // MARK: - Funcs
-    func setupCellWithModel(model: Driver, index: Int) {
+    func setupCellWithModel(model: Car ) {
         carNameLabel.text = model.name
         fluelLabel.text = model.fuel.description
         typeEngineLabel.text = model.engineType
         exteriorLabel.text = model.exterior
-        interiorLabel.text = index.description
+        interiorLabel.text = model.interior
         addressLabel.text = model.address
     }
     

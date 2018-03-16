@@ -12,10 +12,10 @@ import RxSwift
 import CT_RESTAPI
 import Alamofire
 
-typealias SearchDriversServiceCompletionHandler = (_ results: [Driver], _ error: Error?) -> Void
+typealias SearchDriversServiceCompletionHandler = (_ results: [Car], _ error: Error?) -> Void
 
 protocol SearchDriversServiceProtocol {
-    func getListDrivers(completion: @escaping SearchDriversServiceCompletionHandler) -> Observable<[Driver]>
+    func getListDrivers(completion: @escaping SearchDriversServiceCompletionHandler) -> Observable<[Car]>
 }
 
 final class SearchDriversServiece: SearchDriversServiceProtocol {
@@ -24,18 +24,18 @@ final class SearchDriversServiece: SearchDriversServiceProtocol {
     ///
     /// - Parameters:
     ///   - completion: Results and error of API
-    /// - Returns: Observable<[Driver]>
-    func getListDrivers(completion: @escaping SearchDriversServiceCompletionHandler) -> Observable<[Driver]> {
+    /// - Returns: Observable<[Car]>
+    func getListDrivers(completion: @escaping SearchDriversServiceCompletionHandler) -> Observable<[Car]> {
         
         let apiManager = RESTApiClient(subPath: "wunderbucket", functionName: "locations.json", method: .GET, endcoding: .URL)
         
         return apiManager.requestObjects(keyPath: "placemarks")
             .observeOn(MainScheduler.instance)
-            .catchError({ (error) -> Observable<[Driver]> in
+            .catchError({ (error) -> Observable<[Car]> in
                 completion([], error as! CTNetworkErrorType)
                 return Observable.empty()
             })
-            .map { (results) -> [Driver] in
+            .map { (results) -> [Car] in
                 if results.count > 0 {
                     completion(results, nil)
                     return results
@@ -47,7 +47,7 @@ final class SearchDriversServiece: SearchDriversServiceProtocol {
         }
     }
     
-    func createFakePagingLoading() -> Observable<[Driver]> {
+    func createFakePagingLoading() -> Observable<[Car]> {
         return Observable.create { observer -> Disposable in
             request("https://www.google.com/",
                     method: HTTPMethod.get)

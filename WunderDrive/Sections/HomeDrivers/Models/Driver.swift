@@ -8,21 +8,26 @@
 
 import Foundation
 import ObjectMapper
+import CoreLocation
 
-typealias Coordinate = (lat: Float, long: Float)
+typealias Coordinate = (lat: Double, long: Double)
 
-struct Driver: Mappable {
+struct Car: Mappable {
     
     var address             : String = ""
     var engineType          : String = ""
     var exterior            : String = ""
-    var coordinates         : [Float] = [Float]()
+    var coordinates         : [Double] = [Double]()
     var fuel                : Int = 0
     var interior            : String = ""
     var name                : String = ""
     var vin                 : String = ""
     
     init?(map: Map) {}
+    
+    init() {
+        
+    }
     
     mutating func mapping(map: Map) {
         address             <- map["address"]
@@ -35,14 +40,20 @@ struct Driver: Mappable {
         vin                 <- map["vin"]
     }
     
-    func convertToCoordinateObject() -> Coordinate {
+    func convertToCoordinateObject() -> CLLocationCoordinate2D {
         var coordinate = Coordinate(lat: 0.0, long: 0.0)
         
-        guard self.coordinates.count >= 2 else { return coordinate}
-        coordinate.lat = self.coordinates[0]
-        coordinate.long = self.coordinates[1]
+        guard self.coordinates.count >= 2 else { return CLLocationCoordinate2D(latitude: 0,longitude: 0)}
+        coordinate.long = self.coordinates[0]
+        coordinate.lat = self.coordinates[1]
         
-        return coordinate
+        return CLLocationCoordinate2DMake(coordinate.lat, coordinate.long)
+    }
+    
+    func distance(to location: CLLocation) -> CLLocationDistance {
+        let locationCoordinate = self.convertToCoordinateObject()
+        let objectLocation = CLLocation(latitude: locationCoordinate.latitude, longitude: locationCoordinate.longitude)
+        return location.distance(from: objectLocation)
     }
     
 }

@@ -30,7 +30,7 @@
 		0342043F2059913C00084500 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034204192059913B00084500 /* String+Extension.swift */; };
 		034204422059913C00084500 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0342041C2059913B00084500 /* UITableView+Extension.swift */; };
 		034204452059913C00084500 /* PaginationNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034204202059913C00084500 /* PaginationNetworkModel.swift */; };
-		034204532059934F00084500 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034204522059934F00084500 /* Car.swift */; };
+		034204532059934F00084500 /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034204522059934F00084500 /* Driver.swift */; };
 		034204552059937900084500 /* DriverPinMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034204542059937900084500 /* DriverPinMarkView.swift */; };
 		034204572059938300084500 /* DriverPinMarkView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 034204562059938300084500 /* DriverPinMarkView.xib */; };
 		0342045A205993A400084500 /* DriverInformationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03420458205993A400084500 /* DriverInformationCell.swift */; };
@@ -38,6 +38,10 @@
 		0342045D205993B900084500 /* ListCarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0342045C205993B900084500 /* ListCarsViewController.swift */; };
 		0342045F205993D600084500 /* CarsMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0342045E205993D600084500 /* CarsMapsViewController.swift */; };
 		034204612059945000084500 /* ListCarsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034204602059945000084500 /* ListCarsViewModel.swift */; };
+		03D777B1205AF49200CEE019 /* PlaceMarkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D777B0205AF49200CEE019 /* PlaceMarkModel.swift */; };
+		03D777B3205B710400CEE019 /* WunderLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D777B2205B710400CEE019 /* WunderLocationManager.swift */; };
+		03D777B8205B7F6700CEE019 /* CLLocationManager+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D777B7205B7F6700CEE019 /* CLLocationManager+Rx.swift */; };
+		03D777BA205B7F7D00CEE019 /* RxCLLocationManagerDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D777B9205B7F7D00CEE019 /* RxCLLocationManagerDelegateProxy.swift */; };
 		435D590F498895A41978C83C /* Pods_WunderDrive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB02F9419AF1905EB54CE613 /* Pods_WunderDrive.framework */; };
 		AC4972E700EB26446B2DD0D6 /* Pods_WunderDriveTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02B8FD8BDB3229145E515DDA /* Pods_WunderDriveTests.framework */; };
 /* End PBXBuildFile section */
@@ -89,7 +93,7 @@
 		034204192059913B00084500 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		0342041C2059913B00084500 /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		034204202059913C00084500 /* PaginationNetworkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaginationNetworkModel.swift; sourceTree = "<group>"; };
-		034204522059934F00084500 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		034204522059934F00084500 /* Driver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
 		034204542059937900084500 /* DriverPinMarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverPinMarkView.swift; sourceTree = "<group>"; };
 		034204562059938300084500 /* DriverPinMarkView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DriverPinMarkView.xib; sourceTree = "<group>"; };
 		03420458205993A400084500 /* DriverInformationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverInformationCell.swift; sourceTree = "<group>"; };
@@ -97,6 +101,10 @@
 		0342045C205993B900084500 /* ListCarsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCarsViewController.swift; sourceTree = "<group>"; };
 		0342045E205993D600084500 /* CarsMapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsMapsViewController.swift; sourceTree = "<group>"; };
 		034204602059945000084500 /* ListCarsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCarsViewModel.swift; sourceTree = "<group>"; };
+		03D777B0205AF49200CEE019 /* PlaceMarkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMarkModel.swift; sourceTree = "<group>"; };
+		03D777B2205B710400CEE019 /* WunderLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WunderLocationManager.swift; sourceTree = "<group>"; };
+		03D777B7205B7F6700CEE019 /* CLLocationManager+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationManager+Rx.swift"; sourceTree = "<group>"; };
+		03D777B9205B7F7D00CEE019 /* RxCLLocationManagerDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxCLLocationManagerDelegateProxy.swift; sourceTree = "<group>"; };
 		88E7535FAEB95D25CD7CD5B3 /* Pods-WunderDriveTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WunderDriveTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WunderDriveTests/Pods-WunderDriveTests.release.xcconfig"; sourceTree = "<group>"; };
 		8BBD994D88CFAA20CE0C3BFE /* Pods-WunderDriveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WunderDriveTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WunderDriveTests/Pods-WunderDriveTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B92965317A3A23B2C3B1DF43 /* Pods-WunderDrive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WunderDrive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WunderDrive/Pods-WunderDrive.debug.xcconfig"; sourceTree = "<group>"; };
@@ -164,6 +172,7 @@
 		034203B220598F0A00084500 /* WunderDrive */ = {
 			isa = PBXGroup;
 			children = (
+				03D777B4205B712200CEE019 /* Components */,
 				034203B320598F0A00084500 /* AppDelegate.swift */,
 				0342041D2059913C00084500 /* BaseModel */,
 				034204132059913B00084500 /* Extensions */,
@@ -231,7 +240,6 @@
 		0342040C2059913B00084500 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				03408B9F205A92510083375E /* CommonViews */,
 				0342040E2059913B00084500 /* Validate */,
 				0342040D2059913B00084500 /* Constants.swift */,
 				034204122059913B00084500 /* Helper.swift */,
@@ -294,7 +302,8 @@
 		0342044C205992F200084500 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				034204522059934F00084500 /* Car.swift */,
+				034204522059934F00084500 /* Driver.swift */,
+				03D777B0205AF49200CEE019 /* PlaceMarkModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -325,6 +334,25 @@
 				03408B9D205A8B460083375E /* SearchDriversServiece.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		03D777B4205B712200CEE019 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				03D777B6205B7F4D00CEE019 /* LocationManager */,
+				03408B9F205A92510083375E /* CommonViews */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		03D777B6205B7F4D00CEE019 /* LocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				03D777B2205B710400CEE019 /* WunderLocationManager.swift */,
+				03D777B7205B7F6700CEE019 /* CLLocationManager+Rx.swift */,
+				03D777B9205B7F7D00CEE019 /* RxCLLocationManagerDelegateProxy.swift */,
+			);
+			path = LocationManager;
 			sourceTree = "<group>";
 		};
 		218F1A667EE00BC4A84B82B0 /* Pods */ = {
@@ -618,16 +646,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03D777B1205AF49200CEE019 /* PlaceMarkModel.swift in Sources */,
 				0342043E2059913C00084500 /* UIViewController+Extension.swift in Sources */,
 				0342043B2059913C00084500 /* UIColor+Extension.swift in Sources */,
 				0342045A205993A400084500 /* DriverInformationCell.swift in Sources */,
 				03408B9E205A8B460083375E /* SearchDriversServiece.swift in Sources */,
 				034204262059913C00084500 /* BaseMainViewController.swift in Sources */,
-				034204532059934F00084500 /* Car.swift in Sources */,
+				034204532059934F00084500 /* Driver.swift in Sources */,
 				0342043C2059913C00084500 /* UIButton+Extension.swift in Sources */,
 				0342045D205993B900084500 /* ListCarsViewController.swift in Sources */,
 				0342043F2059913C00084500 /* String+Extension.swift in Sources */,
 				034204352059913C00084500 /* Constants.swift in Sources */,
+				03D777B8205B7F6700CEE019 /* CLLocationManager+Rx.swift in Sources */,
 				0342043D2059913C00084500 /* UIView+Extension.swift in Sources */,
 				034204392059913C00084500 /* Helper.swift in Sources */,
 				034204612059945000084500 /* ListCarsViewModel.swift in Sources */,
@@ -638,8 +668,10 @@
 				0342045F205993D600084500 /* CarsMapsViewController.swift in Sources */,
 				034204552059937900084500 /* DriverPinMarkView.swift in Sources */,
 				034204382059913C00084500 /* BindingExtension.swift in Sources */,
+				03D777BA205B7F7D00CEE019 /* RxCLLocationManagerDelegateProxy.swift in Sources */,
 				034204372059913C00084500 /* ValidateProtocol.swift in Sources */,
 				0342043A2059913C00084500 /* UIApplication+Extension.swift in Sources */,
+				03D777B3205B710400CEE019 /* WunderLocationManager.swift in Sources */,
 				03408BA1205A925F0083375E /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

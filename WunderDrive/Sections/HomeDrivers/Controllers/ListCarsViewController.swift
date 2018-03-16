@@ -15,6 +15,7 @@ final class ListCarsViewController: UIViewController {
 
     // MARK: - IBOutlets & Variables
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var noticeView: UIView!
     
     fileprivate let disposeBag = DisposeBag()
     fileprivate let homeDriversViewModel = ListCarsViewModel(homeSearchService: SearchDriversServiece())
@@ -42,11 +43,17 @@ final class ListCarsViewController: UIViewController {
             navigationController.followScrollView(tableView, delay: 50.0)
         }
     }
-    
+     
     //MARK: - Setup views & ViewModel
     
     /// Setup all the view components
     fileprivate func setupViews() {
+        
+        if TARGET_IPHONE_SIMULATOR != 0 {
+            noticeView.isHidden = false
+        } else {
+            noticeView.isHidden = true
+        }
         
         // TableView
         tableView.registerCellNib(DriverInformationCell.self)
@@ -69,13 +76,18 @@ final class ListCarsViewController: UIViewController {
         // --- For loading animation ---
         homeDriversViewModel.isLoadingAnimation.subscribe(onNext: { [weak self] (isLoading) in
             if isLoading { self?.loadingView.startLoadding() }
-            else {  self?.loadingView.stopLoadding() }
+            else { self?.loadingView.stopLoadding() }
         }).disposed(by: disposeBag)
         
         // --- For handling error ---
         homeDriversViewModel.errorObservable.subscribe(onNext: { (error) in
             Helper.showAlertViewWith(error: error)
         }).disposed(by: disposeBag)
+        
+        homeDriversViewModel.driversResults.asObservable()
+            .subscribe(onNext:{ [weak self] (cars) in
+                self?.noticeView.isHidden = cars.count > 0 ? true : false
+            }).disposed(by: disposeBag)
         
         // --- Binding for TableView ---
         homeDriversViewModel.elements.asObservable()
@@ -86,13 +98,13 @@ final class ListCarsViewController: UIViewController {
                 strongSelf.tableView.delegate = nil
                 Observable.just(results)
                     .bind(to: strongSelf.tableView.rx
-                        .items(cellIdentifier: "DriverInformationCell")) { (index, model: Driver, cell) in
+                        .items(cellIdentifier: "DriverInformationCell")) { (index, model: Car, cell) in
                             if let cell: DriverInformationCell = cell as? DriverInformationCell {
-                                cell.setupCellWithModel(model: model, index: index)
+                                cell.setupCellWithModel(model: model)
                             }
                     }.disposed(by: strongSelf.disposeBag)
             }).disposed(by: disposeBag)
     }
     
-    
 }
+

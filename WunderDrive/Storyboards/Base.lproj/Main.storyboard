@@ -9,6 +9,14 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Medium</string>
+        </array>
+        <array key="HelveticaNeueLights.ttc">
+            <string>HelveticaNeue-Light</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Wunder Maps-->
         <scene sceneID="eLd-rZ-fWB">
@@ -18,9 +26,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="741-nA-prG" customClass="MapViewPlus" customModule="MapViewPlus">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="741-nA-prG">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                <subviews>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsScale="YES" showsTraffic="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HUl-4d-u49" customClass="MapViewPlus" customModule="MapViewPlus">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="w6W-pp-EdU" id="Li7-uk-Y7Q"/>
+                                        </connections>
+                                    </mapView>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="HUl-4d-u49" secondAttribute="bottom" id="2eM-pn-ZFZ"/>
+                                    <constraint firstItem="HUl-4d-u49" firstAttribute="leading" secondItem="741-nA-prG" secondAttribute="leading" id="41s-M9-02T"/>
+                                    <constraint firstAttribute="trailing" secondItem="HUl-4d-u49" secondAttribute="trailing" id="KBm-DC-YfP"/>
+                                    <constraint firstItem="HUl-4d-u49" firstAttribute="top" secondItem="741-nA-prG" secondAttribute="top" id="oFd-lN-UrJ"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -34,7 +56,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Wunder Maps" id="0A3-KV-3fb"/>
                     <connections>
-                        <outlet property="mapView" destination="741-nA-prG" id="ITs-OO-ruE"/>
+                        <outlet property="mapView" destination="HUl-4d-u49" id="fEB-wP-ZDp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1rI-fw-Jh8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -53,18 +75,49 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.59610445205479456" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fdI-gd-ldv">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you're runing this app by Simulator, please make sure you set the default location of Simulator already." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="twk-hz-4sE">
+                                        <rect key="frame" x="20" y="249" width="335" height="57"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We need to acess your location to find the nearest cars for you" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGB-8I-mYL">
+                                        <rect key="frame" x="20" y="190.5" width="335" height="38.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="twk-hz-4sE" firstAttribute="top" secondItem="OGB-8I-mYL" secondAttribute="bottom" constant="20" id="NPH-IB-sDv"/>
+                                    <constraint firstItem="twk-hz-4sE" firstAttribute="centerY" secondItem="fdI-gd-ldv" secondAttribute="centerY" id="UdL-NL-kR3"/>
+                                    <constraint firstItem="twk-hz-4sE" firstAttribute="leading" secondItem="fdI-gd-ldv" secondAttribute="leading" constant="20" id="oAk-B6-zxs"/>
+                                    <constraint firstAttribute="trailing" secondItem="OGB-8I-mYL" secondAttribute="trailing" constant="20" id="sZz-QC-5dB"/>
+                                    <constraint firstItem="OGB-8I-mYL" firstAttribute="leading" secondItem="fdI-gd-ldv" secondAttribute="leading" constant="20" id="xIw-Yk-1xN"/>
+                                    <constraint firstAttribute="trailing" secondItem="twk-hz-4sE" secondAttribute="trailing" constant="20" id="ydW-52-Coe"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="fdI-gd-ldv" firstAttribute="trailing" secondItem="uiO-0R-lvC" secondAttribute="trailing" id="1q4-s6-fyQ"/>
                             <constraint firstItem="vTQ-3B-ajH" firstAttribute="leading" secondItem="uiO-0R-lvC" secondAttribute="leading" id="Rq8-nO-jBE"/>
                             <constraint firstItem="vTQ-3B-ajH" firstAttribute="trailing" secondItem="uiO-0R-lvC" secondAttribute="trailing" id="Tkp-Sh-KZk"/>
+                            <constraint firstItem="fdI-gd-ldv" firstAttribute="top" secondItem="uiO-0R-lvC" secondAttribute="top" id="eEg-wb-wEP"/>
                             <constraint firstItem="vTQ-3B-ajH" firstAttribute="bottom" secondItem="uiO-0R-lvC" secondAttribute="bottom" id="ipA-cD-SYZ"/>
+                            <constraint firstItem="uiO-0R-lvC" firstAttribute="bottom" secondItem="fdI-gd-ldv" secondAttribute="bottom" id="lwT-WE-wmD"/>
+                            <constraint firstItem="fdI-gd-ldv" firstAttribute="leading" secondItem="uiO-0R-lvC" secondAttribute="leading" id="n5s-UO-Pw9"/>
                             <constraint firstItem="vTQ-3B-ajH" firstAttribute="top" secondItem="uiO-0R-lvC" secondAttribute="top" id="sTF-gg-NQm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uiO-0R-lvC"/>
                     </view>
                     <navigationItem key="navigationItem" title="List Drivers" id="EbU-VB-n8m"/>
                     <connections>
+                        <outlet property="noticeView" destination="fdI-gd-ldv" id="xyL-x0-BdC"/>
                         <outlet property="tableView" destination="vTQ-3B-ajH" id="aUI-q3-Yb8"/>
                     </connections>
                 </viewController>
