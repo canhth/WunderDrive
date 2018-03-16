@@ -4,7 +4,7 @@
 
 ## Please make sure that you're testing this app by real device, otherwise you must set default location to (53.570493, 9.985019)
 <p align="center">
-  <img width="320" height="536" src="images/Howto.png"/>
+  <img width="520" height="536" src="images/Howto.png"/>
 </p>
 <p align="center"> How to set default location for Simulator </p>
 
@@ -23,12 +23,12 @@
 ### Images:
 
 <p align="center">
-  <img width="320" height="536" src="images/Section1.png"/>
+  <img width="320" height="636" src="images/Section1.png"/>
 </p>
 <p align="center"> Movie results </p>
 
 <p align="center">
-  <img width="320" height="536" src="images/Section2.png"/>
+  <img width="320" height="636" src="images/Section2.png"/>
 </p>
 <p align="center"> Suggestions list </p>
  
