@@ -8,10 +8,15 @@
 </p>
 <p align="center"> How to set default location for Simulator </p>
 
-## Technical notes: 
+## New Change:
+ - Now I changed to use MVVM-C without RxSwift.
+ - Refactor 'CT_RESTAPI' to use only Alamofire and Coable.
+ - Remove all unused files and use less frameworks as possible.
+
+## Old Technical notes: 
  - Swift version 4.0
  - Xcode 9.2
- - MVVM pattern and reactive programming (RxSwift) 
+ - MVVM pattern and reactive programming (RxSwift)
  - My Networking library 'CT_RESTAPI' (Coable Swift 4 or ObjectMapper)
  - Support sort list drivers nearest user's current location or centerLocation of map when we dragging.
  - Including UnitTests, Mocking for SearchDriversServiece
