@@ -18,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         _ = WunderLocationManager.sharedInstance.setupWunderLocationManager()
         
+        sleep(2)
+        
         let appCoordinator = WunderCoordinator(window: window!)
         appCoordinator.startToLoadView()
         window?.makeKeyAndVisible()

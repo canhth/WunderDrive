@@ -6,7 +6,8 @@
 //  Copyright © 2018 Tran Hoang Canh. All rights reserved.
 //
 
-import UIKit 
+import UIKit
+import CoreLocation
 
 final class ListCarsViewController: UIViewController {
 
@@ -36,6 +37,8 @@ final class ListCarsViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
     
+        WunderLocationManager.sharedInstance.locationManager.delegate = self
+        WunderLocationManager.sharedInstance.setupWunderLocationManager()
     }
     
     func setupViewModel() {
@@ -70,6 +73,16 @@ extension ListCarsViewController: HomeListViewModelViewDelegate {
     
     func listCarsDidChanged() {
         self.tableView.reloadData()
+    }
+}
+
+extension ListCarsViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if(status == .authorizedAlways || status == .authorizedWhenInUse){
+            self.viewModel.setupHomeDriversViewModel()
+        } else if(status == .denied){
+            print("Denied!!!")
+        }
     }
 }
 
