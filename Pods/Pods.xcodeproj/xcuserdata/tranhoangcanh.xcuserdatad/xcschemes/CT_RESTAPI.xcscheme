@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '47C04419260F4BF1173CE11ED4ABF2DA'
+               BlueprintIdentifier = 'ECAB3811BD8300A0D641A4C209D7226A'
                BlueprintName = 'CT_RESTAPI'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'CT_RESTAPI.framework'>

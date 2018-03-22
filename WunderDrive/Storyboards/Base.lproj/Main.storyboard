@@ -75,49 +75,18 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.59610445205479456" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fdI-gd-ldv">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you're runing this app by Simulator, please make sure you set the default location of Simulator already." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="twk-hz-4sE">
-                                        <rect key="frame" x="20" y="249" width="335" height="57"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We need to acess your location to find the nearest cars for you" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGB-8I-mYL">
-                                        <rect key="frame" x="20" y="190.5" width="335" height="38.5"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="twk-hz-4sE" firstAttribute="top" secondItem="OGB-8I-mYL" secondAttribute="bottom" constant="20" id="NPH-IB-sDv"/>
-                                    <constraint firstItem="twk-hz-4sE" firstAttribute="centerY" secondItem="fdI-gd-ldv" secondAttribute="centerY" id="UdL-NL-kR3"/>
-                                    <constraint firstItem="twk-hz-4sE" firstAttribute="leading" secondItem="fdI-gd-ldv" secondAttribute="leading" constant="20" id="oAk-B6-zxs"/>
-                                    <constraint firstAttribute="trailing" secondItem="OGB-8I-mYL" secondAttribute="trailing" constant="20" id="sZz-QC-5dB"/>
-                                    <constraint firstItem="OGB-8I-mYL" firstAttribute="leading" secondItem="fdI-gd-ldv" secondAttribute="leading" constant="20" id="xIw-Yk-1xN"/>
-                                    <constraint firstAttribute="trailing" secondItem="twk-hz-4sE" secondAttribute="trailing" constant="20" id="ydW-52-Coe"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="fdI-gd-ldv" firstAttribute="trailing" secondItem="uiO-0R-lvC" secondAttribute="trailing" id="1q4-s6-fyQ"/>
                             <constraint firstItem="vTQ-3B-ajH" firstAttribute="leading" secondItem="uiO-0R-lvC" secondAttribute="leading" id="Rq8-nO-jBE"/>
                             <constraint firstItem="vTQ-3B-ajH" firstAttribute="trailing" secondItem="uiO-0R-lvC" secondAttribute="trailing" id="Tkp-Sh-KZk"/>
-                            <constraint firstItem="fdI-gd-ldv" firstAttribute="top" secondItem="uiO-0R-lvC" secondAttribute="top" id="eEg-wb-wEP"/>
                             <constraint firstItem="vTQ-3B-ajH" firstAttribute="bottom" secondItem="uiO-0R-lvC" secondAttribute="bottom" id="ipA-cD-SYZ"/>
-                            <constraint firstItem="uiO-0R-lvC" firstAttribute="bottom" secondItem="fdI-gd-ldv" secondAttribute="bottom" id="lwT-WE-wmD"/>
-                            <constraint firstItem="fdI-gd-ldv" firstAttribute="leading" secondItem="uiO-0R-lvC" secondAttribute="leading" id="n5s-UO-Pw9"/>
                             <constraint firstItem="vTQ-3B-ajH" firstAttribute="top" secondItem="uiO-0R-lvC" secondAttribute="top" id="sTF-gg-NQm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uiO-0R-lvC"/>
                     </view>
                     <navigationItem key="navigationItem" title="List Drivers" id="EbU-VB-n8m"/>
                     <connections>
-                        <outlet property="noticeView" destination="fdI-gd-ldv" id="xyL-x0-BdC"/>
                         <outlet property="tableView" destination="vTQ-3B-ajH" id="aUI-q3-Yb8"/>
                     </connections>
                 </viewController>
@@ -125,10 +94,10 @@
             </objects>
             <point key="canvasLocation" x="613.60000000000002" y="-1843.6281859070466"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tabbar View Controller-->
         <scene sceneID="td4-fD-4gv">
             <objects>
-                <tabBarController id="Mc0-SN-tQN" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabbarViewController" id="Mc0-SN-tQN" customClass="MainTabbarViewController" customModule="WunderDrive" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Vgi-Gz-BEH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -149,7 +118,7 @@
         <!--List-->
         <scene sceneID="ory-Fu-kXh">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="O9c-Jq-cia" customClass="ScrollingNavigationController" customModule="AMScrollingNavbar" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="O9c-Jq-cia" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="List" image="tabbar_list" selectedImage="tabbar_list_selected" id="6Gb-bj-zzM"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="ya0-YN-cQc">
@@ -168,10 +137,59 @@
             </objects>
             <point key="canvasLocation" x="-134.40000000000001" y="-1842.2788605697153"/>
         </scene>
+        <!--Request Permission View Controller-->
+        <scene sceneID="oJR-qz-te6">
+            <objects>
+                <viewController storyboardIdentifier="RequestPermissionViewController" id="uoe-3z-Dlp" customClass="RequestPermissionViewController" customModule="WunderDrive" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XLV-Ig-GxU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fSB-zh-6iV">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you're runing this app by Simulator, please make sure you set the default location of Simulator already." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nro-Yo-I9s">
+                                        <rect key="frame" x="20" y="305.5" width="335" height="57"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We need to acess your location to find the nearest cars for you" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5x-ZX-9GJ">
+                                        <rect key="frame" x="20" y="247" width="335" height="38.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Nro-Yo-I9s" secondAttribute="trailing" constant="20" id="1dv-AF-bkx"/>
+                                    <constraint firstItem="q5x-ZX-9GJ" firstAttribute="leading" secondItem="fSB-zh-6iV" secondAttribute="leading" constant="20" id="AAd-eP-q25"/>
+                                    <constraint firstItem="Nro-Yo-I9s" firstAttribute="leading" secondItem="fSB-zh-6iV" secondAttribute="leading" constant="20" id="OPd-Go-oR3"/>
+                                    <constraint firstItem="Nro-Yo-I9s" firstAttribute="centerY" secondItem="fSB-zh-6iV" secondAttribute="centerY" id="dOg-x2-ktm"/>
+                                    <constraint firstAttribute="trailing" secondItem="q5x-ZX-9GJ" secondAttribute="trailing" constant="20" id="mhu-4y-6As"/>
+                                    <constraint firstItem="Nro-Yo-I9s" firstAttribute="top" secondItem="q5x-ZX-9GJ" secondAttribute="bottom" constant="20" id="zjw-38-nTF"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fSB-zh-6iV" firstAttribute="leading" secondItem="XLV-Ig-GxU" secondAttribute="leading" id="5dz-2b-l67"/>
+                            <constraint firstItem="mVT-gS-u5T" firstAttribute="bottom" secondItem="fSB-zh-6iV" secondAttribute="bottom" id="7Y8-0h-Sfe"/>
+                            <constraint firstItem="fSB-zh-6iV" firstAttribute="top" secondItem="XLV-Ig-GxU" secondAttribute="top" id="SAF-G5-Msj"/>
+                            <constraint firstItem="mVT-gS-u5T" firstAttribute="trailing" secondItem="fSB-zh-6iV" secondAttribute="trailing" id="bTz-Wn-5f7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mVT-gS-u5T"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d7K-Xg-IdS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1078" y="-678"/>
+        </scene>
         <!--Maps-->
         <scene sceneID="NVC-nA-tRD">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8nS-gf-u8z" customClass="ScrollingNavigationController" customModule="AMScrollingNavbar" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8nS-gf-u8z" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Maps" image="tabbar_map" selectedImage="tabbar_map_selected" id="nSF-P7-kJ6"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="fcr-Q3-dsF">

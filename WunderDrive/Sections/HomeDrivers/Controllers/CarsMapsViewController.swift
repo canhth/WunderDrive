@@ -6,9 +6,7 @@
 //  Copyright © 2018 Tran Hoang Canh. All rights reserved.
 //
 
-import UIKit
-import RxCocoa
-import RxSwift
+import UIKit 
 import MapViewPlus
 import MapKit
 
@@ -17,11 +15,9 @@ class CarsMapsViewController: UIViewController {
     //MARK: - IBOutlets & Variables
     @IBOutlet weak var mapView: MapViewPlus!
     
-    fileprivate weak var currentCalloutView: UIView?
-    fileprivate let disposeBag = DisposeBag()
-    fileprivate let carsMapsViewModel = ListCarsViewModel(homeSearchService: SearchDriversServiece())
+    fileprivate weak var currentCalloutView: UIView? 
+    fileprivate let viewModel = MapCarsViewModel(homeSearchService: SearchDriversServiece())
     fileprivate let locationManager = WunderLocationManager.sharedInstance.locationManager
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,21 +48,7 @@ class CarsMapsViewController: UIViewController {
     }
     
     fileprivate func setupViewModel() {
-        carsMapsViewModel.setupHomeDriversViewModel()
-        // --- Binding for TableView ---
-        carsMapsViewModel.elements.asObservable()
-            .observeOn(MainScheduler.asyncInstance)
-            .subscribe(onNext: { [weak self] (results) in
-               self?.createPlaceMarksWithElements(elements: results)
-            }).disposed(by: disposeBag)
-    }
-    
-    fileprivate func createPlaceMarksWithElements(elements: [Car]) {
-        var annotations: [AnnotationPlus] = []
-        elements.forEach { (driver) in
-            annotations.append(AnnotationPlus(viewModel: PlaceMarkModel(driver: driver), coordinate: driver.convertToCoordinateObject()))
-        }
-        mapView.setup(withAnnotations: annotations)
+        viewModel.mapViewDelegate = self
     }
     
     fileprivate func getZoomLevelOfMap() -> Int {
@@ -92,7 +74,7 @@ extension CarsMapsViewController: MapViewPlusDelegate {
         currentCalloutView = calloutView
         return calloutView
     }
-     }
+}
 
 extension CarsMapsViewController: AnchorViewCustomizerDelegate {
     func mapView(_ mapView: MapViewPlus, fillColorForAnchorOf calloutView: CalloutViewPlus) -> UIColor {
@@ -114,7 +96,15 @@ extension CarsMapsViewController: MKMapViewDelegate, CLLocationManagerDelegate {
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
         let zoomLevel = self.getZoomLevelOfMap()
         let centerLocation = self.getCenterCoordinateOfMap()
-        self.carsMapsViewModel.loadMoreCarWith(zoomValue: zoomLevel, centerLocation: centerLocation)
+        viewModel.loadMoreItemsOnMap(zoomLevel: zoomLevel, centerLocation: centerLocation)
     }
 }
- 
+
+extension CarsMapsViewController: HomeMapListViewModelDelegate {
+    
+    func didCreatedPlaceMarks(placeMarks: [AnnotationPlus]) {
+        DispatchQueue.main.async {
+            self.mapView.setup(withAnnotations: placeMarks)
+        }
+    }
+}

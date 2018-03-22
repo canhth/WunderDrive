@@ -6,27 +6,14 @@
 //  Copyright © 2018 Tran Hoang Canh. All rights reserved.
 //
 
-import UIKit
-import AMScrollingNavbar
-import RxCocoa
-import RxSwift
+import UIKit 
 
 final class ListCarsViewController: UIViewController {
 
     // MARK: - IBOutlets & Variables
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var noticeView: UIView!
+    @IBOutlet weak fileprivate var tableView: UITableView!
     
-    fileprivate let disposeBag = DisposeBag()
-    fileprivate let homeDriversViewModel = ListCarsViewModel(homeSearchService: SearchDriversServiece())
-    
-    fileprivate lazy var loadingView: LoaddingView = {
-        let loadingView = LoaddingView(frame: UIScreen.main.bounds)
-        loadingView.backgroundColor = .clear
-        loadingView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        self.view.addSubview(loadingView)
-        return loadingView
-    }()
+    fileprivate var viewModel = ListCarsViewModel(homeSearchService: SearchDriversServiece())
     
     
     //MARK: - View Lifecycle
@@ -36,77 +23,55 @@ final class ListCarsViewController: UIViewController {
         setupViews()
         setupViewModel()
     }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        if let navigationController = navigationController as? ScrollingNavigationController {
-            navigationController.followScrollView(tableView, delay: 50.0)
-        }
-    }
      
     //MARK: - Setup views & ViewModel
     
     /// Setup all the view components
     fileprivate func setupViews() {
         
-        if TARGET_IPHONE_SIMULATOR != 0 {
-            noticeView.isHidden = false
-        } else {
-            noticeView.isHidden = true
-        }
-        
         // TableView
         tableView.registerCellNib(DriverInformationCell.self)
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 150
-        
-        // For Lazy paging loading
-        tableView.rx.contentOffset
-            .flatMap { offset in
-                self.tableView.isNearBottomEdge() ? Observable.just(()) : Observable.empty()
-            }
-            .debounce(0.1, scheduler: MainScheduler.instance)
-            .bind(to: homeDriversViewModel.loadNextPageTrigger)
-            .disposed(by: disposeBag)
+        tableView.dataSource = self
+        tableView.delegate = self
+    
     }
     
     func setupViewModel() {
-        homeDriversViewModel.setupHomeDriversViewModel()
-        
-        // --- For loading animation ---
-        homeDriversViewModel.isLoadingAnimation
-            .observeOn(MainScheduler.asyncInstance)
-            .subscribe(onNext: { [weak self] (isLoading) in
-            if isLoading { self?.loadingView.startLoadding() }
-            else { self?.loadingView.stopLoadding() }
-        }).disposed(by: disposeBag)
-        
-        // --- For handling error ---
-        homeDriversViewModel.errorObservable.subscribe(onNext: { (error) in
-            Helper.showAlertViewWith(error: error)
-        }).disposed(by: disposeBag)
-        
-        homeDriversViewModel.driversResults.asObservable()
-            .subscribe(onNext:{ [weak self] (cars) in
-                self?.noticeView.isHidden = cars.count > 0 ? true : false
-            }).disposed(by: disposeBag)
-        
-        // --- Binding for TableView ---
-        homeDriversViewModel.elements.asObservable()
-            .observeOn(MainScheduler.asyncInstance)
-            .subscribe(onNext: { [weak self] (results) in
-                guard let strongSelf = self else { return }
-                strongSelf.tableView.dataSource = nil
-                strongSelf.tableView.delegate = nil
-                Observable.just(results)
-                    .bind(to: strongSelf.tableView.rx
-                        .items(cellIdentifier: "DriverInformationCell")) { (index, model: Car, cell) in
-                            if let cell: DriverInformationCell = cell as? DriverInformationCell {
-                                cell.setupCellWithModel(model: model)
-                            }
-                    }.disposed(by: strongSelf.disposeBag)
-            }).disposed(by: disposeBag)
+        viewModel.listViewDelegate = self
     }
     
 }
 
+extension ListCarsViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.numberOfItems
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DriverInformationCell", for: indexPath) as! DriverInformationCell
+        if let model = viewModel.itemAtIndex(indexPath.row) {
+            cell.setupCellWithModel(model: model)
+        }
+        return cell
+    }
+}
+
+extension ListCarsViewController: UITableViewDelegate {
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        if self.tableView.isNearBottomEdge()  {
+            viewModel.loadDataOfNextPage()
+        }
+    }
+}
+
+extension ListCarsViewController: HomeListViewModelViewDelegate {
+    
+    func listCarsDidChanged() {
+        self.tableView.reloadData()
+    }
+}
+
+// Default tabbar for HomeView
+class MainTabbarViewController: UITabBarController { }

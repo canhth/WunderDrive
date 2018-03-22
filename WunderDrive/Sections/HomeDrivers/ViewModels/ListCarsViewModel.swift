@@ -7,57 +7,62 @@
 //
 
 import Foundation
-import RxCocoa
-import RxSwift
 import CT_RESTAPI
 import CoreLocation
 
-/// Home search ViewModel, based on PaginationNetworkModel
-final class ListCarsViewModel: PaginationNetworkModel<Car> {
+final class ListCarsViewModel: HomeListViewModel {
     
-    //MARK: - Variables
+    //MARK: - Variables & confirm protocol
     fileprivate(set) var homeSearchService          : SearchDriversServiceProtocol!
-    fileprivate(set) var driversResults             = Variable<[Car]>([])
-    fileprivate(set) var errorObservable            = PublishSubject<CTNetworkErrorType>()
-    fileprivate(set) var isLoadingAnimation         = PublishSubject<Bool>()
-    fileprivate(set) var page                       = BehaviorSubject<Int>(value: 1)
-    fileprivate      let disposeBag                 = DisposeBag()
+    fileprivate(set) var totalItems                 : [Car] = [Car]()
+    fileprivate(set) var page                       : Int = 1
     fileprivate      var maxItemPerPage             = 20
-    fileprivate      let standarZoomLevel           = 5
+    fileprivate      var maxOffset                  = 20
+    
+    var listViewDelegate: HomeListViewModelViewDelegate?
+    
+    var numberOfItems: Int {
+        if let cars = cars {
+            return cars.count
+        }
+        return 0
+    }
+    
+    func itemAtIndex(_ index: Int) -> Car? {
+        if let cars = cars , cars.count > index {
+            return cars[index]
+        }
+        return nil
+    }
+    
+    fileprivate(set) var cars: [Car]? {
+        didSet {
+            listViewDelegate?.listCarsDidChanged()
+        }
+    }
     
     //MARK: - Main functions
     
     /// Init ViewModel
-    ///
     /// - Parameter homeSearchService: API service
     init(homeSearchService: SearchDriversServiceProtocol) {
         self.homeSearchService = homeSearchService
+        setupHomeDriversViewModel()
     }
     
     /// Setup View model to get list Drivers
     ///
     func setupHomeDriversViewModel() {
         
-        // --- Setup drivers results list Observable by location updated ---
-        var observable : Observable<[Car]>!
-        
-        WunderLocationManager.sharedInstance.location
-            .asObservable()
-            .subscribe(onNext: { (location) in
-                self.isLoadingAnimation.onNext(true)
-                observable = self.homeSearchService.getListDrivers(completion: { [weak self] (drivers, error) in
-                    guard let strongSelf = self  else { return }
-                    if let error = error {
-                        strongSelf.errorObservable.onNext(error as! CTNetworkErrorType)
-                    } else {
-                        strongSelf.setupModelWithResults(results: drivers)
-                    }
-                    strongSelf.isLoadingAnimation.onNext(false)
-                }).share(replay: 1)
-                
-                observable.subscribe().disposed(by: self.disposeBag)
-            }).disposed(by: disposeBag)
-        
+        // --- Setup drivers results list by location  ---
+        self.homeSearchService.getListDrivers(completion: { [weak self] (drivers, error) in
+            guard let strongSelf = self  else { return }
+            if let error = error {
+                Helper.showAlertViewWith(error: error.toError() as! CTNetworkErrorType)
+            } else {
+                strongSelf.setupModelWithResults(results: drivers)
+            }
+        })
     }
     
     //MARK: - Supporting methods
@@ -68,62 +73,34 @@ final class ListCarsViewModel: PaginationNetworkModel<Car> {
         guard results.count > 0 else { return }
         if let currentLocation = WunderLocationManager.sharedInstance.locationManager.location {
             
-            self.driversResults.value = results.sorted(by: { $0.distance(to: currentLocation) < $1.distance(to: currentLocation) })
-            self.elements.value = Array(self.driversResults.value.prefix(upTo: maxItemPerPage))
+            totalItems = results.sorted(by: { $0.distance(to: currentLocation) < $1.distance(to: currentLocation) })
+            self.cars = Array(totalItems.prefix(upTo: maxItemPerPage))
             self.maxOffset = Int(results.count / maxItemPerPage) + 1
+        } else {
+            Helper.showAlertViewWith(message: "Could you please setup share location on Simulator by go to Debug->Location->CustomLocation (53.570493, 9.985019) and retry again")
         }
     }
     
     /// Lazy loading method
     /// - Parameter offset: the next page
-    /// - Returns: Observable that we need to triger
-    override func loadData(offset: Int) -> Observable<[Car]> {
-        print("Current offset: \(offset)")
+    func loadDataOfNextPage() {
+        
+        page += 1
+        print("Current offset: \(page)")
         
         // --- Setup drivers results list Observable ---
         var arrayValue = [Car]()
-        guard maxOffset > offset else { return Observable.just(arrayValue) }
+        guard maxOffset > page else { return }
         
-        let lastCurrentIndex = (offset - 1) * self.maxItemPerPage - 1
-        if offset >= self.maxOffset - 1 {
+        let lastCurrentIndex = (page - 1) * self.maxItemPerPage - 1
+        if page >= self.maxOffset - 1 {
             // Return all values in the last page
-            arrayValue = Array(self.driversResults.value[lastCurrentIndex..<self.driversResults.value.count])
+            arrayValue = Array(totalItems[lastCurrentIndex..<totalItems.count])
         } else {
             let nextIndex = lastCurrentIndex + self.maxItemPerPage
-            arrayValue = Array(self.driversResults.value[lastCurrentIndex..<nextIndex])
+            arrayValue = Array(totalItems[lastCurrentIndex..<nextIndex])
         }
-        return Observable.just(arrayValue) 
+        self.cars?.append(contentsOf: arrayValue)
     }
     
-    
-    /// Load moew cars when user zoom or dragging map
-    ///
-    /// - Parameters:
-    ///   - zoomValue: currentZoomValue
-    ///   - centerLocation: center location of map
-    func loadMoreCarWith(zoomValue: Int, centerLocation: CLLocation) {
-        
-        self.driversResults.value = self.driversResults.value.sorted(by: { $0.distance(to: centerLocation) < $1.distance(to: centerLocation) })
-        
-        if zoomValue > standarZoomLevel {
-            let zoom = zoomValue - standarZoomLevel
-            switch zoom {
-            case 1:
-                maxItemPerPage = 20 * 3
-                break
-            case 2:
-                maxItemPerPage = 20 * 4
-                break
-            case 3:
-                maxItemPerPage = 20 * 6
-                break
-            default:
-                maxItemPerPage = driversResults.value.count
-            }
-        } else {
-            maxItemPerPage = 20
-        }
-        
-        self.elements.value = Array(self.driversResults.value.prefix(upTo: maxItemPerPage))
-    }
 }

@@ -21,19 +21,7 @@
     "OTHER_LDFLAGS": "-lObjC"
   },
   "dependencies": {
-    "RxSwift": [
-
-    ],
-    "ObjectMapper": [
-
-    ],
-    "SwiftyJSON": [
-
-    ],
     "Alamofire": [
-
-    ],
-    "CocoaLumberjack/Swift": [
 
     ]
   }

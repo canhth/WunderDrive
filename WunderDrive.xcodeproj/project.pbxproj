@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03032B8720638E15009D9906 /* CarsMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0342045E205993D600084500 /* CarsMapsViewController.swift */; };
+		03032B8820638E15009D9906 /* HomeMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C40B5C2063662A005C8D07 /* HomeMapViewModel.swift */; };
+		03032B8920638E15009D9906 /* MapCarsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C40B5A20636544005C8D07 /* MapCarsViewModel.swift */; };
 		03120296205BE7490069BAF1 /* HomeDriversTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03120295205BE7490069BAF1 /* HomeDriversTest.swift */; };
 		03120298205BE76A0069BAF1 /* MockHomeDeriverTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03120297205BE76A0069BAF1 /* MockHomeDeriverTest.swift */; };
 		0312029B205BE7880069BAF1 /* MockSearchDriversServiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0312029A205BE7880069BAF1 /* MockSearchDriversServiece.swift */; };
@@ -16,41 +19,33 @@
 		031202A8205BF4060069BAF1 /* HomeSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031202A5205BF4060069BAF1 /* HomeSearchUITests.swift */; };
 		03408B9C205A8A6A0083375E /* DriverPinMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034204542059937900084500 /* DriverPinMarkView.swift */; };
 		03408B9E205A8B460083375E /* SearchDriversServiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03408B9D205A8B460083375E /* SearchDriversServiece.swift */; };
-		03408BA1205A925F0083375E /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03408BA0205A925F0083375E /* LoadingView.swift */; };
 		034203B420598F0A00084500 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034203B320598F0A00084500 /* AppDelegate.swift */; };
 		034203C920598F0A00084500 /* WunderDriveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034203C820598F0A00084500 /* WunderDriveTests.swift */; };
 		034203D420598F0A00084500 /* WunderDriveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034203D320598F0A00084500 /* WunderDriveUITests.swift */; };
 		034204232059913C00084500 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 034203E22059913B00084500 /* Assets.xcassets */; };
 		034204242059913C00084500 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 034203E42059913B00084500 /* LaunchScreen.storyboard */; };
 		034204252059913C00084500 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 034203E62059913B00084500 /* Main.storyboard */; };
-		034204262059913C00084500 /* BaseMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034203F02059913B00084500 /* BaseMainViewController.swift */; };
-		034204352059913C00084500 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0342040D2059913B00084500 /* Constants.swift */; };
-		034204362059913C00084500 /* ValidateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0342040F2059913B00084500 /* ValidateService.swift */; };
-		034204372059913C00084500 /* ValidateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034204102059913B00084500 /* ValidateProtocol.swift */; };
-		034204382059913C00084500 /* BindingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034204112059913B00084500 /* BindingExtension.swift */; };
 		034204392059913C00084500 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034204122059913B00084500 /* Helper.swift */; };
 		0342043A2059913C00084500 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034204142059913B00084500 /* UIApplication+Extension.swift */; };
 		0342043B2059913C00084500 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034204152059913B00084500 /* UIColor+Extension.swift */; };
-		0342043C2059913C00084500 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034204162059913B00084500 /* UIButton+Extension.swift */; };
 		0342043D2059913C00084500 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034204172059913B00084500 /* UIView+Extension.swift */; };
-		0342043E2059913C00084500 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034204182059913B00084500 /* UIViewController+Extension.swift */; };
-		0342043F2059913C00084500 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034204192059913B00084500 /* String+Extension.swift */; };
 		034204422059913C00084500 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0342041C2059913B00084500 /* UITableView+Extension.swift */; };
-		034204452059913C00084500 /* PaginationNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034204202059913C00084500 /* PaginationNetworkModel.swift */; };
-		034204532059934F00084500 /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034204522059934F00084500 /* Driver.swift */; };
+		034204532059934F00084500 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034204522059934F00084500 /* Car.swift */; };
 		034204552059937900084500 /* DriverPinMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034204542059937900084500 /* DriverPinMarkView.swift */; };
 		034204572059938300084500 /* DriverPinMarkView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 034204562059938300084500 /* DriverPinMarkView.xib */; };
 		0342045A205993A400084500 /* DriverInformationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03420458205993A400084500 /* DriverInformationCell.swift */; };
 		0342045B205993A400084500 /* DriverInformationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03420459205993A400084500 /* DriverInformationCell.xib */; };
 		0342045D205993B900084500 /* ListCarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0342045C205993B900084500 /* ListCarsViewController.swift */; };
-		0342045F205993D600084500 /* CarsMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0342045E205993D600084500 /* CarsMapsViewController.swift */; };
 		034204612059945000084500 /* ListCarsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034204602059945000084500 /* ListCarsViewModel.swift */; };
+		03C40B492062B945005C8D07 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C40B482062B945005C8D07 /* BaseCoordinator.swift */; };
+		03C40B4B2062B9D3005C8D07 /* WunderCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C40B4A2062B9D3005C8D07 /* WunderCoordinator.swift */; };
+		03C40B4E2062BB75005C8D07 /* RequestPermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C40B4D2062BB75005C8D07 /* RequestPermissionViewController.swift */; };
+		03C40B532062BC9B005C8D07 /* RequestPermissionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C40B522062BC9B005C8D07 /* RequestPermissionCoordinator.swift */; };
+		03C40B562062BEB0005C8D07 /* HomePageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C40B552062BEB0005C8D07 /* HomePageCoordinator.swift */; };
+		03C40B5920635D43005C8D07 /* HomeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C40B5820635D43005C8D07 /* HomeListViewModel.swift */; };
 		03D777B1205AF49200CEE019 /* PlaceMarkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D777B0205AF49200CEE019 /* PlaceMarkModel.swift */; };
 		03D777B3205B710400CEE019 /* WunderLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D777B2205B710400CEE019 /* WunderLocationManager.swift */; };
-		03D777B8205B7F6700CEE019 /* CLLocationManager+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D777B7205B7F6700CEE019 /* CLLocationManager+Rx.swift */; };
-		03D777BA205B7F7D00CEE019 /* RxCLLocationManagerDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D777B9205B7F7D00CEE019 /* RxCLLocationManagerDelegateProxy.swift */; };
 		435D590F498895A41978C83C /* Pods_WunderDrive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB02F9419AF1905EB54CE613 /* Pods_WunderDrive.framework */; };
-		AC4972E700EB26446B2DD0D6 /* Pods_WunderDriveTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02B8FD8BDB3229145E515DDA /* Pods_WunderDriveTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,7 +75,6 @@
 		031202A3205BF4060069BAF1 /* XCUIElementUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCUIElementUtil.swift; sourceTree = "<group>"; };
 		031202A5205BF4060069BAF1 /* HomeSearchUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeSearchUITests.swift; sourceTree = "<group>"; };
 		03408B9D205A8B460083375E /* SearchDriversServiece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDriversServiece.swift; sourceTree = "<group>"; };
-		03408BA0205A925F0083375E /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		034203B020598F0A00084500 /* WunderDrive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WunderDrive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		034203B320598F0A00084500 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		034203BF20598F0A00084500 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -93,21 +87,12 @@
 		034203E22059913B00084500 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		034203E52059913B00084500 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		034203E72059913B00084500 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		034203F02059913B00084500 /* BaseMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMainViewController.swift; sourceTree = "<group>"; };
-		0342040D2059913B00084500 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		0342040F2059913B00084500 /* ValidateService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidateService.swift; sourceTree = "<group>"; };
-		034204102059913B00084500 /* ValidateProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidateProtocol.swift; sourceTree = "<group>"; };
-		034204112059913B00084500 /* BindingExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BindingExtension.swift; sourceTree = "<group>"; };
 		034204122059913B00084500 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		034204142059913B00084500 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
 		034204152059913B00084500 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
-		034204162059913B00084500 /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		034204172059913B00084500 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
-		034204182059913B00084500 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
-		034204192059913B00084500 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		0342041C2059913B00084500 /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
-		034204202059913C00084500 /* PaginationNetworkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaginationNetworkModel.swift; sourceTree = "<group>"; };
-		034204522059934F00084500 /* Driver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
+		034204522059934F00084500 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		034204542059937900084500 /* DriverPinMarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverPinMarkView.swift; sourceTree = "<group>"; };
 		034204562059938300084500 /* DriverPinMarkView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DriverPinMarkView.xib; sourceTree = "<group>"; };
 		03420458205993A400084500 /* DriverInformationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverInformationCell.swift; sourceTree = "<group>"; };
@@ -115,12 +100,16 @@
 		0342045C205993B900084500 /* ListCarsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCarsViewController.swift; sourceTree = "<group>"; };
 		0342045E205993D600084500 /* CarsMapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsMapsViewController.swift; sourceTree = "<group>"; };
 		034204602059945000084500 /* ListCarsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCarsViewModel.swift; sourceTree = "<group>"; };
+		03C40B482062B945005C8D07 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		03C40B4A2062B9D3005C8D07 /* WunderCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WunderCoordinator.swift; sourceTree = "<group>"; };
+		03C40B4D2062BB75005C8D07 /* RequestPermissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestPermissionViewController.swift; sourceTree = "<group>"; };
+		03C40B522062BC9B005C8D07 /* RequestPermissionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestPermissionCoordinator.swift; sourceTree = "<group>"; };
+		03C40B552062BEB0005C8D07 /* HomePageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageCoordinator.swift; sourceTree = "<group>"; };
+		03C40B5820635D43005C8D07 /* HomeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListViewModel.swift; sourceTree = "<group>"; };
+		03C40B5A20636544005C8D07 /* MapCarsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCarsViewModel.swift; sourceTree = "<group>"; };
+		03C40B5C2063662A005C8D07 /* HomeMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMapViewModel.swift; sourceTree = "<group>"; };
 		03D777B0205AF49200CEE019 /* PlaceMarkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMarkModel.swift; sourceTree = "<group>"; };
 		03D777B2205B710400CEE019 /* WunderLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WunderLocationManager.swift; sourceTree = "<group>"; };
-		03D777B7205B7F6700CEE019 /* CLLocationManager+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationManager+Rx.swift"; sourceTree = "<group>"; };
-		03D777B9205B7F7D00CEE019 /* RxCLLocationManagerDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxCLLocationManagerDelegateProxy.swift; sourceTree = "<group>"; };
-		88E7535FAEB95D25CD7CD5B3 /* Pods-WunderDriveTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WunderDriveTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WunderDriveTests/Pods-WunderDriveTests.release.xcconfig"; sourceTree = "<group>"; };
-		8BBD994D88CFAA20CE0C3BFE /* Pods-WunderDriveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WunderDriveTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WunderDriveTests/Pods-WunderDriveTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B92965317A3A23B2C3B1DF43 /* Pods-WunderDrive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WunderDrive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WunderDrive/Pods-WunderDrive.debug.xcconfig"; sourceTree = "<group>"; };
 		E7360BC3A53F9863D0EBB04B /* Pods-WunderDrive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WunderDrive.release.xcconfig"; path = "Pods/Target Support Files/Pods-WunderDrive/Pods-WunderDrive.release.xcconfig"; sourceTree = "<group>"; };
 		EB02F9419AF1905EB54CE613 /* Pods_WunderDrive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WunderDrive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,7 +128,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC4972E700EB26446B2DD0D6 /* Pods_WunderDriveTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,14 +184,6 @@
 			path = HomeSearch;
 			sourceTree = "<group>";
 		};
-		03408B9F205A92510083375E /* CommonViews */ = {
-			isa = PBXGroup;
-			children = (
-				03408BA0205A925F0083375E /* LoadingView.swift */,
-			);
-			path = CommonViews;
-			sourceTree = "<group>";
-		};
 		034203A720598F0900084500 = {
 			isa = PBXGroup;
 			children = (
@@ -229,9 +209,9 @@
 		034203B220598F0A00084500 /* WunderDrive */ = {
 			isa = PBXGroup;
 			children = (
-				03D777B4205B712200CEE019 /* Components */,
 				034203B320598F0A00084500 /* AppDelegate.swift */,
-				0342041D2059913C00084500 /* BaseModel */,
+				03C40B472062B92D005C8D07 /* Coordinators */,
+				03D777B4205B712200CEE019 /* Components */,
 				034204132059913B00084500 /* Extensions */,
 				034203E12059913B00084500 /* Resources */,
 				034203E82059913B00084500 /* Sections */,
@@ -284,38 +264,18 @@
 		034203E82059913B00084500 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				03C40B4F2062BC62005C8D07 /* RequestPermission */,
 				0342044A205992D500084500 /* HomeDrivers */,
-				034203EF2059913B00084500 /* MainHome */,
 			);
 			path = Sections;
-			sourceTree = "<group>";
-		};
-		034203EF2059913B00084500 /* MainHome */ = {
-			isa = PBXGroup;
-			children = (
-				034203F02059913B00084500 /* BaseMainViewController.swift */,
-			);
-			path = MainHome;
 			sourceTree = "<group>";
 		};
 		0342040C2059913B00084500 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				0342040E2059913B00084500 /* Validate */,
-				0342040D2059913B00084500 /* Constants.swift */,
 				034204122059913B00084500 /* Helper.swift */,
 			);
 			path = Utilities;
-			sourceTree = "<group>";
-		};
-		0342040E2059913B00084500 /* Validate */ = {
-			isa = PBXGroup;
-			children = (
-				0342040F2059913B00084500 /* ValidateService.swift */,
-				034204102059913B00084500 /* ValidateProtocol.swift */,
-				034204112059913B00084500 /* BindingExtension.swift */,
-			);
-			path = Validate;
 			sourceTree = "<group>";
 		};
 		034204132059913B00084500 /* Extensions */ = {
@@ -323,26 +283,16 @@
 			children = (
 				034204142059913B00084500 /* UIApplication+Extension.swift */,
 				034204152059913B00084500 /* UIColor+Extension.swift */,
-				034204162059913B00084500 /* UIButton+Extension.swift */,
 				034204172059913B00084500 /* UIView+Extension.swift */,
-				034204182059913B00084500 /* UIViewController+Extension.swift */,
-				034204192059913B00084500 /* String+Extension.swift */,
 				0342041C2059913B00084500 /* UITableView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		0342041D2059913C00084500 /* BaseModel */ = {
-			isa = PBXGroup;
-			children = (
-				034204202059913C00084500 /* PaginationNetworkModel.swift */,
-			);
-			path = BaseModel;
-			sourceTree = "<group>";
-		};
 		0342044A205992D500084500 /* HomeDrivers */ = {
 			isa = PBXGroup;
 			children = (
+				03C40B542062BE90005C8D07 /* Coordinators */,
 				0342044F2059930200084500 /* Services */,
 				0342044E205992FD00084500 /* Views */,
 				0342044D205992F700084500 /* Controllers */,
@@ -355,7 +305,9 @@
 		0342044B205992E600084500 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				03C40B5720635D32005C8D07 /* Protocols */,
 				034204602059945000084500 /* ListCarsViewModel.swift */,
+				03C40B5A20636544005C8D07 /* MapCarsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -363,7 +315,7 @@
 		0342044C205992F200084500 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				034204522059934F00084500 /* Driver.swift */,
+				034204522059934F00084500 /* Car.swift */,
 				03D777B0205AF49200CEE019 /* PlaceMarkModel.swift */,
 			);
 			path = Models;
@@ -397,11 +349,61 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		03C40B472062B92D005C8D07 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				03C40B482062B945005C8D07 /* BaseCoordinator.swift */,
+				03C40B4A2062B9D3005C8D07 /* WunderCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		03C40B4F2062BC62005C8D07 /* RequestPermission */ = {
+			isa = PBXGroup;
+			children = (
+				03C40B512062BC82005C8D07 /* Coordinator */,
+				03C40B502062BC72005C8D07 /* ViewController */,
+			);
+			path = RequestPermission;
+			sourceTree = "<group>";
+		};
+		03C40B502062BC72005C8D07 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				03C40B4D2062BB75005C8D07 /* RequestPermissionViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		03C40B512062BC82005C8D07 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				03C40B522062BC9B005C8D07 /* RequestPermissionCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		03C40B542062BE90005C8D07 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				03C40B552062BEB0005C8D07 /* HomePageCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		03C40B5720635D32005C8D07 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				03C40B5820635D43005C8D07 /* HomeListViewModel.swift */,
+				03C40B5C2063662A005C8D07 /* HomeMapViewModel.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		03D777B4205B712200CEE019 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				03D777B6205B7F4D00CEE019 /* LocationManager */,
-				03408B9F205A92510083375E /* CommonViews */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -410,8 +412,6 @@
 			isa = PBXGroup;
 			children = (
 				03D777B2205B710400CEE019 /* WunderLocationManager.swift */,
-				03D777B7205B7F6700CEE019 /* CLLocationManager+Rx.swift */,
-				03D777B9205B7F7D00CEE019 /* RxCLLocationManagerDelegateProxy.swift */,
 			);
 			path = LocationManager;
 			sourceTree = "<group>";
@@ -421,8 +421,6 @@
 			children = (
 				B92965317A3A23B2C3B1DF43 /* Pods-WunderDrive.debug.xcconfig */,
 				E7360BC3A53F9863D0EBB04B /* Pods-WunderDrive.release.xcconfig */,
-				8BBD994D88CFAA20CE0C3BFE /* Pods-WunderDriveTests.debug.xcconfig */,
-				88E7535FAEB95D25CD7CD5B3 /* Pods-WunderDriveTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -463,12 +461,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 034203DB20598F0A00084500 /* Build configuration list for PBXNativeTarget "WunderDriveTests" */;
 			buildPhases = (
-				BFC2C2CE91F58E01686367A8 /* [CP] Check Pods Manifest.lock */,
 				034203C020598F0A00084500 /* Sources */,
 				034203C120598F0A00084500 /* Frameworks */,
 				034203C220598F0A00084500 /* Resources */,
-				90B56AD2438A53BC3E38F960 /* [CP] Embed Pods Frameworks */,
-				26357D235911201B97B161F1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -592,21 +587,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		26357D235911201B97B161F1 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WunderDriveTests/Pods-WunderDriveTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		436F7C394F6BDEC8029012C9 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -629,75 +609,21 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-WunderDrive/Pods-WunderDrive-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AMScrollingNavbar/AMScrollingNavbar.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/CT_RESTAPI/CT_RESTAPI.framework",
-				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
-				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MapViewPlus/MapViewPlus.framework",
-				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AMScrollingNavbar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CT_RESTAPI.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MapViewPlus.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WunderDrive/Pods-WunderDrive-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		90B56AD2438A53BC3E38F960 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-WunderDriveTests/Pods-WunderDriveTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
-				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WunderDriveTests/Pods-WunderDriveTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BFC2C2CE91F58E01686367A8 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WunderDriveTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -708,32 +634,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				03D777B1205AF49200CEE019 /* PlaceMarkModel.swift in Sources */,
-				0342043E2059913C00084500 /* UIViewController+Extension.swift in Sources */,
 				0342043B2059913C00084500 /* UIColor+Extension.swift in Sources */,
+				03C40B4B2062B9D3005C8D07 /* WunderCoordinator.swift in Sources */,
+				03C40B4E2062BB75005C8D07 /* RequestPermissionViewController.swift in Sources */,
 				0342045A205993A400084500 /* DriverInformationCell.swift in Sources */,
 				03408B9E205A8B460083375E /* SearchDriversServiece.swift in Sources */,
-				034204262059913C00084500 /* BaseMainViewController.swift in Sources */,
-				034204532059934F00084500 /* Driver.swift in Sources */,
-				0342043C2059913C00084500 /* UIButton+Extension.swift in Sources */,
+				03C40B562062BEB0005C8D07 /* HomePageCoordinator.swift in Sources */,
+				034204532059934F00084500 /* Car.swift in Sources */,
 				0342045D205993B900084500 /* ListCarsViewController.swift in Sources */,
-				0342043F2059913C00084500 /* String+Extension.swift in Sources */,
-				034204352059913C00084500 /* Constants.swift in Sources */,
-				03D777B8205B7F6700CEE019 /* CLLocationManager+Rx.swift in Sources */,
 				0342043D2059913C00084500 /* UIView+Extension.swift in Sources */,
 				034204392059913C00084500 /* Helper.swift in Sources */,
 				034204612059945000084500 /* ListCarsViewModel.swift in Sources */,
 				034203B420598F0A00084500 /* AppDelegate.swift in Sources */,
-				034204362059913C00084500 /* ValidateService.swift in Sources */,
-				034204452059913C00084500 /* PaginationNetworkModel.swift in Sources */,
 				034204422059913C00084500 /* UITableView+Extension.swift in Sources */,
-				0342045F205993D600084500 /* CarsMapsViewController.swift in Sources */,
 				034204552059937900084500 /* DriverPinMarkView.swift in Sources */,
-				034204382059913C00084500 /* BindingExtension.swift in Sources */,
-				03D777BA205B7F7D00CEE019 /* RxCLLocationManagerDelegateProxy.swift in Sources */,
-				034204372059913C00084500 /* ValidateProtocol.swift in Sources */,
+				03032B8720638E15009D9906 /* CarsMapsViewController.swift in Sources */,
+				03032B8920638E15009D9906 /* MapCarsViewModel.swift in Sources */,
+				03C40B5920635D43005C8D07 /* HomeListViewModel.swift in Sources */,
 				0342043A2059913C00084500 /* UIApplication+Extension.swift in Sources */,
+				03032B8820638E15009D9906 /* HomeMapViewModel.swift in Sources */,
 				03D777B3205B710400CEE019 /* WunderLocationManager.swift in Sources */,
-				03408BA1205A925F0083375E /* LoadingView.swift in Sources */,
+				03C40B492062B945005C8D07 /* BaseCoordinator.swift in Sources */,
+				03C40B532062BC9B005C8D07 /* RequestPermissionCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -937,7 +859,6 @@
 		};
 		034203DC20598F0A00084500 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8BBD994D88CFAA20CE0C3BFE /* Pods-WunderDriveTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -955,7 +876,6 @@
 		};
 		034203DD20598F0A00084500 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 88E7535FAEB95D25CD7CD5B3 /* Pods-WunderDriveTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
